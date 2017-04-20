@@ -1,0 +1,13 @@
+{
+  "name": "emisti_bower",
+  "description": "external frontend dependencies of emisti webpage",
+  "main": "emisti_bower",
+  "authors": [
+    "greenjelly"
+  ],
+  "dependencies": {
+    "angular": "^1.6.4",
+    "bootstrap": "^3.3.7",
+    "angular-bootstrap": "^2.5.0"
+  }
+}

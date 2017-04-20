@@ -1,0 +1,19 @@
+{
+  "name": "emisti_webapp",
+  "version": "1.0.0",
+  "description": "emisti webapp configuration of npm",
+  "main": "serve.js",
+  "author": "greenjelly",
+  "scripts": {
+    "start": "node serve.js"
+  },
+  "main": "serve.js",
+  "dependencies": {
+    "bower": "^1.8.0",
+    "body-parser": "^1.4.3",
+    "express": "^4.13.4",
+    "method-override": "^2.1.3",
+    "mongoose": "^4.4.12",
+    "morgan": "^1.1.1"
+  }
+}
