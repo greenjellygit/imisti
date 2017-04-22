@@ -1,16 +1,25 @@
 <html>
 <head>
-  <link rel="stylesheet" src="bower_components\bootstrap\dist\css\bootstrap.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bower_components/mini.css/dist/mini-default.css" />
+  <link rel="stylesheet" href="styles/emisti.css" />
 </head>
 <body ng-app="emistiApp">
-  <div ng-controller="MainController">
-    {{test}}
+  <div>
+    <header ng-controller="NavbarController">
+      <a href="#" class="logo">Logo</a>
+      <span>
+        <a href="#" role="button">główna</a>
+        <a href="#" role="button">aktualności</a>
+        <a href="#" role="button">oferta</a>
+        <a href="#" role="button">kontakt</a>
+      </span>
+    </header>
   </div>
-  <script src="bower_components\angular\angular.js"></script>
-  <script src="bower_components\jquery\dist\jquery.js"></script>
-  <script src="bower_components\angular-bootstrap\ui-bootstrap-tpls.js"></script>
+
+  <script src="bower_components/angular/angular.js"></script>
 
   <script src="js/app.js"></script>
-  <script src="js//controllers/MainController.js"></script>
+  <script src="js/controllers/NavbarController.js"></script>
 </body>
 </html>

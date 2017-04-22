@@ -1,1 +1,1 @@
-angular.module("emistiApp", ["ui.bootstrap"]);
+angular.module("emistiApp", []);
