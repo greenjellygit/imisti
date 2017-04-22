@@ -5,14 +5,14 @@
   "main": "serve.js",
   "author": "greenjelly",
   "scripts": {
-    "postinstall": "bower install",
     "start": "node serve.js"
   },
-  "main": "serve.js",
   "dependencies": {
-    "bower": "^1.8.0",
     "body-parser": "^1.4.3",
+    "bower": "^1.8.0",
     "express": "^4.13.4",
+    "gulp": "^3.9.1",
+    "gulp-bower": "0.0.13",
     "method-override": "^2.1.3",
     "mongoose": "^4.4.12",
     "morgan": "^1.1.1"
