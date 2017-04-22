@@ -5,6 +5,7 @@
   "main": "serve.js",
   "author": "greenjelly",
   "scripts": {
+    "postinstall": "bower install",
     "start": "node serve.js"
   },
   "main": "serve.js",
