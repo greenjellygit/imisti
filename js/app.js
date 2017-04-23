@@ -12,7 +12,8 @@ angular.module("emistiApp").config(['$stateProvider', "$urlRouterProvider", "$lo
       })
       .state("news", {
         url: "/news",
-        templateUrl: "js/templates/news.html"
+        templateUrl: "js/templates/news.html",
+        controller: "NewsController"
       })
       .state("offert", {
         url: "/offert",

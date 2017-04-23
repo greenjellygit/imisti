@@ -6,7 +6,7 @@
 <body ng-app="emistiApp">
   <header ng-controller="NavbarController" class="text-right">
     <a ui-sref="home" ng-class="{'active': isLogoVisible()}" class="logo-misti-small" ng-cloak></a>
-    <a ui-sref="home" ui-sref-active="active" role="button">główna</a>
+    <a ui-sref="home" ui-sref-active="active" role="button">strona główna</a>
     <a ui-sref="news" ui-sref-active="active" role="button">aktualności</a>
     <a ui-sref="offert" ui-sref-active="active" role="button">oferta</a>
     <a ui-sref="contact" ui-sref-active="active" role="button">kontakt</a>
@@ -26,5 +26,7 @@
 
   <script src="js/app.js"></script>
   <script src="js/controllers/NavbarController.js"></script>
+  <script src="js/controllers/NewsController.js"></script>
+  <script src="js/services/NewsService.js"></script>
 </body>
 </html>
