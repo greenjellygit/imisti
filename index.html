@@ -5,7 +5,7 @@
 </head>
 <body ng-app="emistiApp">
   <header ng-controller="NavbarController" class="text-right">
-    <a ui-sref="home" ng-show="isLogoVisible" ui-sref-active="active" class="logo-misti-small"></a>
+    <a ui-sref="home" ng-class="{'active': isLogoVisible()}" class="logo-misti-small" ng-cloak></a>
     <a ui-sref="home" ui-sref-active="active" role="button">główna</a>
     <a ui-sref="news" ui-sref-active="active" role="button">aktualności</a>
     <a ui-sref="offert" ui-sref-active="active" role="button">oferta</a>

@@ -1,4 +1,9 @@
 @charset "UTF-8";
+.ng-hide,
+.ng-hide-animate {
+  display: none !important;
+}
+
 .text-left {
   text-align: left;
 }
@@ -2343,21 +2348,24 @@ ul.breadcrumbs li:last-child:after {
   width: 134px;
   height: 35px;
   margin-top: 4px;
-}
-
-.logo-misti-small.active-add, .logo-misti-small.active-remove {
-  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 4s;
-}
-
-.logo-misti-small.active,
-.logo-misti-small.actives-add.active-add-active {
   opacity: 0;
   margin-left: -157px;
 }
 
-.logo-misti-small.active-remove.active-remove-active {
+.logo-misti-small.active-add,
+.logo-misti-small.active-remove {
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s;
+}
+
+.logo-misti-small.active,
+.logo-misti-small.actives-add.active-add-active {
   opacity: 1;
   margin-left: 11px;
+}
+
+.logo-misti-small.active-remove.active-remove-active {
+  opacity: 0;
+  margin-left: -157px;
 }
 
 .logo-misti-big {
@@ -2420,7 +2428,8 @@ footer.fixed {
   width: 100%;
 }
 
-header a[role="button"]:hover, a[role="button"].active {
+a[role="button"].active,
+header a[role="button"]:hover {
   border-bottom: 2px solid #ffb749;
   border-radius: 0;
   transition-duration: 0s;
@@ -2440,14 +2449,15 @@ body {
   height: 65px;
 }
 
-[ui-view].ng-enter, [ui-view].ng-leave {
+[ui-view].ng-enter,
+[ui-view].ng-leave {
   position: absolute;
   left: 0;
   right: 0;
-  -webkit-transition: all .5s ease-in-out;
-  -moz-transition: all .5s ease-in-out;
-  -o-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 [ui-view].ng-enter {
@@ -2473,7 +2483,7 @@ body {
 
 [ui-view].ng-leave-active {
   opacity: 0;
-  -webkit-transform: translate3d(100px, 0, 0);
-  -moz-transform: translate3d(100px, 0, 0);
-  transform: translate3d(100px, 0, 0);
+  -webkit-transform: scale3d(0.5, 0.5, 0.5);
+  -moz-transform: scale3d(0.5, 0.5, 0.5);
+  transform: scale3d(0.5, 0.5, 0.5);
 }
