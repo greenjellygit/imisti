@@ -1,0 +1,205 @@
+$color-emisti-cta: #ffb749;
+$color-emisti-dark-blue: #1f2837;
+$color-emisti-middle-blue: #303e55;
+$color-emisti-text: #fcf8f4;
+$color-emisti-transparent: rgba(0, 0, 0, 0.6);
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.top-buffer-25 {
+  margin-top: 25px;
+}
+
+.top-buffer-50 {
+  margin-top: 50px;
+}
+
+.top-buffer-75 {
+  margin-top: 75px;
+}
+
+.top-buffer-120 {
+  margin-top: 120px;
+}
+
+.round-panel {
+  border-radius: 25px;
+  background-color: $color-emisti-transparent;
+  padding: 10px;
+}
+
+.dark-blue-color {color: $color-emisti-middle-blue;}
+
+.quoted-text:before {
+  content: "";
+  background-image: url("../images/quote.png");
+  width: 17px;
+  height: 13px;
+  background-repeat: no-repeat;
+  position: absolute;
+  margin-left: -25px;
+  margin-right: 8px;
+  margin-bottom: 4px;
+}
+
+.quoted-text:after {
+  content: "";
+  background-image: url("../images/quote.png");
+  position: absolute;
+  width: 17px;
+  height: 13px;
+  background-repeat: no-repeat;
+  margin-left: 8px;
+  margin-top: 9px;
+  transform: scaleX(-1) scaleY(-1);
+}
+@import "mini-default";
+
+.logo-misti-small {
+  float: left;
+  background-image: url("../images/logo_small.png");
+  background-repeat: no-repeat;
+  width: 134px;
+  height: 35px;
+  margin-top: 4px;
+}
+
+.logo-misti-small.active-add, .logo-misti-small.active-remove {
+  transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 4s;
+}
+
+.logo-misti-small.active,
+.logo-misti-small.actives-add.active-add-active {
+  opacity: 0;
+  margin-left: -157px;
+}
+
+.logo-misti-small.active-remove.active-remove-active {
+  opacity: 1;
+  margin-left: 11px;
+}
+
+.logo-misti-big {
+  background-image: url("../images/logo_big.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 166px;
+  width: 400px;
+  margin: auto;
+}
+
+.poland {
+  background-image: url("../images/poland.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+[class^="companyValue-"] {
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 50px;
+  width: 43px;
+  margin: auto;
+  display: inline-block;
+  padding: 10px;
+}
+.companyValue-1 {
+    background-image: url("../images/company_value1.png");
+}
+.companyValue-2 {
+    background-image: url("../images/company_value2.png");
+}
+.companyValue-3 {
+    background-image: url("../images/company_value3.png");
+}
+
+.companyValues {
+  color: $color-emisti-middle-blue;
+  font-size: $h1-font-size;
+}
+
+.companyValues > * {
+    vertical-align: middle;
+}
+
+[class^="companyValue-"] > span {
+  font-size: x-small;
+  display: inline-block;
+  margin-top: 53px;
+  margin-left: -23px;
+  width: 90px;
+}
+
+footer.fixed {
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+}
+
+header a[role="button"]:hover, a[role="button"].active {
+  border-bottom: 2px solid $color-emisti-cta;
+  border-radius: 0;
+  transition-duration: 0s;
+}
+
+body {
+  background-image: url("../images/background.png");
+  background-color: rgba(199, 209, 223, 145);
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+.ui-view-container {
+  position: relative;
+  height: 65px;
+}
+
+[ui-view].ng-enter, [ui-view].ng-leave {
+  position: absolute;
+  left: 0;
+  right: 0;
+  -webkit-transition:all .5s ease-in-out;
+	-moz-transition:all .5s ease-in-out;
+	-o-transition:all .5s ease-in-out;
+	transition:all .5s ease-in-out;
+}
+
+[ui-view].ng-enter {
+  opacity: 0;
+  -webkit-transform:scale3d(0.5, 0.5, 0.5);
+  -moz-transform:scale3d(0.5, 0.5, 0.5);
+  transform:scale3d(0.5, 0.5, 0.5);
+}
+
+[ui-view].ng-enter-active {
+  opacity: 1;
+  -webkit-transform:scale3d(1, 1, 1);
+  -moz-transform:scale3d(1, 1, 1);
+  transform:scale3d(1, 1, 1);
+}
+
+[ui-view].ng-leave {
+  opacity: 1;
+  -webkit-transform:translate3d(0, 0, 0);
+  -moz-transform:translate3d(0, 0, 0);
+  transform:translate3d(0, 0, 0);
+}
+
+[ui-view].ng-leave-active {
+  opacity: 0;
+  -webkit-transform:translate3d(100px, 0, 0);
+  -moz-transform:translate3d(100px, 0, 0);
+  transform:translate3d(100px, 0, 0);
+}
