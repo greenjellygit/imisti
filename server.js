@@ -11,13 +11,13 @@ require('./rest/NewsRestController.js')(app);
 app.set('port', process.env.OPENSHIFT_NODEJS_PORT || 8080);
 app.set('ip', process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1');
 
-app.use(express.static(__dirname + '/public/'));
+app.use(express.static(__dirname + '/'));
 app.use(bodyParser.urlencoded({
   'extended': 'true'
 }));
 
 app.get('/', function(req, res) {
-  res.render('/public/index.html');
+  res.render('index.html');
 });
 
 fbConn.initialize();
