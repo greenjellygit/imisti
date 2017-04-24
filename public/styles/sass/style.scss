@@ -153,6 +153,10 @@ $color-emisti-transparent: rgba(0, 0, 0, 0.6);
   width: 90px;
 }
 
+.navigation-offset {
+  top: 37px;
+}
+
 footer.fixed {
   bottom: 0;
   position: fixed;
@@ -172,12 +176,14 @@ body {
   background-blend-mode: overlay;
   background-repeat: no-repeat;
   background-size: cover;
-  overflow-x: hidden;
+  background-attachment: fixed;
+  overflow: hidden;
 }
 
 .ui-view-container {
   position: relative;
-  height: 65px;
+  height: 100%;
+  overflow: auto;
 }
 
 [ui-view].ng-enter,
@@ -220,4 +226,63 @@ body {
   -webkit-transform: scale3d(0.5, 0.5, 0.5);
   -moz-transform: scale3d(0.5, 0.5, 0.5);
   transform: scale3d(0.5, 0.5, 0.5);
+}
+//-------------------------------news
+
+.news-panel {
+  height: 130px;
+  margin-bottom: 20px;
+}
+
+.news-image {
+  width: 180;
+  height: 100;
+  overflow: hidden;
+  position: relative;
+  margin-top: 5px;
+}
+
+.news-image > img {
+  position: absolute;
+  left: -100%;
+  right: -100%;
+  top: -100%;
+  bottom: -100%;
+  margin: auto;
+  width: auto;
+  height: auto;
+}
+
+.news-date {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  color: $color-emisti-dark-blue;
+  background-color: $color-emisti-text;
+  margin-left: -3px;
+  margin-top: -3px;
+  margin-right: 6px;
+  border-radius: 100px;
+}
+
+.news-date > div {
+  line-height: 14px;
+  font-size: 15pt;
+}
+
+.news-date > div:first-child {
+  font-size: 9pt;
+  text-transform: uppercase;
+  padding-top: 5px;
+}
+
+.news-title {
+  font-size: 0.9em;
+  margin-left: 10px;
+}
+
+.news-text {
+  font-size: 0.7em;
+  margin-left: 10px;
+  margin-top: 5px;
 }

@@ -6,12 +6,12 @@ var server = require('gulp-express');
 var sequence = require('gulp-sequence')
 
 var config = {
-  sassPath: './styles/sass',
-  bowerDir: './bower_components'
+  sassPath: 'public/styles/sass',
+  bowerDir: 'public/bower_components'
 }
 
 gulp.task('bower', function() {
-  return bower()
+  return bower(config.bowerDir)
     .pipe(gulp.dest(config.bowerDir))
 });
 
@@ -22,11 +22,11 @@ gulp.task('css', function() { 
       outputStyle: 'expanded',
        includePaths: [  config.bowerDir + '/mini.css/src/mini/' ] 
     })) 
-    .pipe(gulp.dest('./styles/css')); 
+    .pipe(gulp.dest('./public/styles/css')); 
 });
 
 gulp.task('server', function() {
-  server.run(['serve.js']);
+  server.run(['server.js']);
 
   gulp.watch(config.sassPath + '/**/*.scss', ['css']); 
 });

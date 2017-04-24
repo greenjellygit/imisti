@@ -1,0 +1,17 @@
+<div class="top-buffer-25">
+  <div ng-repeat="news in newsList | orderBy: '-created_time'" class="row col-sm-10 col-sm-offset-1 news-panel">
+    <div class="row col-sm-8 col-sm-offset-2 round-panel">
+      <div class="news-date">
+        <div>{{news.created_time | date:'MMM'}}</div>
+        <div>{{news.created_time | date:'dd'}}</div>
+      </div>
+      <div class="col-sm-3">
+        <img class="news-image" ng-src="{{news.picture && news.picture || '../styles/images/no_picture.png'}}" />
+      </div>
+      <div class="col-sm-8">
+        <div class="row news-title">{{news.title}}</div>
+        <div class="row news-text">{{news.text}}</div>
+      </div>
+    </div>
+  </div>
+</div>
