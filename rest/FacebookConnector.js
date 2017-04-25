@@ -1,9 +1,8 @@
 var q = require('q');
-
 var util = require('util');
 var unirest = require('unirest');
 
-const pageId = "464656396920353";
+const pageId = "284449561997051";
 var accessToken = null;
 
 const urls = {
@@ -29,12 +28,15 @@ function getAccessToken() {
     });
 }
 
-function findPosts() {
+function findPosts(offset, limit) {
   util.log('GET request: getNews');
   var deferred = q.defer();
   unirest.get(urls.fanpagePosts)
     .query({
-      access_token: accessToken
+      access_token: accessToken,
+      fields: 'full_picture,picture,message,created_time',
+      offset: offset,
+      limit: limit
     })
     .headers({
       'Accept': 'application/json',
@@ -45,18 +47,22 @@ function findPosts() {
         deferred.reject(new Error(res.error));
       } else {
         util.log("GET response: getNews ");
-        deferred.resolve(processPosts(res.body.data));
+        var responseObj = {
+          isLastPage: !res.body.paging.next,
+          newsPage: processPosts(res.body.data)
+        };
+        deferred.resolve(responseObj);
       }
     });
-    return deferred.promise;
+  return deferred.promise;
 }
 
 function processPosts(postList) {
-  for(var i in postList) {
+  for (var i in postList) {
     var message = postList[i].message;
     var textLines = message.split('\n');
     postList[i].title = textLines.splice(0, 1)[0];
-    postList[i].text = textLines.join('\n');
+    postList[i].text = textLines.join('\n').substring(1);
   }
   return postList;
 }

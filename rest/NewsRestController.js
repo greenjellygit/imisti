@@ -1,8 +1,8 @@
 var fbConn = require('./FacebookConnector');
 
 module.exports = function(app) {
-  app.get('/getNews', function(req, response) {
-    fbConn.findPosts().then(function(data) {
+  app.get('/loadNewsPage/:offset/:limit', function(req, response) {
+    fbConn.findPosts(req.params.offset, req.params.limit).then(function(data) {
       response.json(data);
     });
   });

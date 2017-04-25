@@ -1,17 +1,30 @@
 <div class="top-buffer-25">
   <div ng-repeat="news in newsList | orderBy: '-created_time'" class="row col-sm-10 col-sm-offset-1 news-panel">
     <div class="row col-sm-8 col-sm-offset-2 round-panel">
-      <div class="news-date">
-        <div>{{news.created_time | date:'MMM'}}</div>
-        <div>{{news.created_time | date:'dd'}}</div>
+      <div class="col-sm-1 ">
+        <div class="news-date">
+          <div>{{news.created_time | date:'MMM'}}</div>
+          <div>{{news.created_time | date:'dd'}}</div>
+        </div>
       </div>
-      <div class="col-sm-3">
-        <img class="news-image" ng-src="{{news.picture && news.picture || '../styles/images/no_picture.png'}}" />
+      <div class="col-sm-4">
+        <div>
+          <img class="news-image" ng-src="{{news.full_picture && news.full_picture || '../styles/images/no_picture.png'}}" />
+        </div>
       </div>
-      <div class="col-sm-8">
+      <div class="col-sm-7">
         <div class="row news-title">{{news.title}}</div>
-        <div class="row news-text">{{news.text}}</div>
+        <div class="row news-text" ng-init="news.isMoreRequested = false;">
+          <span read-more max-length="250" text="news.text" is-more="news.isMore" is-overflowed="isOverflowed">{{news.text}}</span>
+        </div>
+        <div class="row">
+          <button class="readMore-button" ng-show="!news.isMore && isOverflowed" ng-click="news.isMore = true;">Czytaj więcej</button>
+          <button class="readMore-button" ng-show="news.isMore" ng-click="news.isMore = false;">Czytaj mniej...</button>
+        </div>
       </div>
     </div>
+  </div>
+  <div class="row">
+    <button class="loadMore-button" ng-if="!isLastPage" ng-click="loadNewsPage()">załaduj więcej</button>
   </div>
 </div>

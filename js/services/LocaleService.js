@@ -6,7 +6,7 @@ angular.module('emistiApp').service('LocaleService', function($translate, LOCALE
 
   var checkLocaleIsValid = function(locale) {
     return localeList.some(function(e) {
-      return e.name == locale
+      return e.name == locale;
     });
   };
 
@@ -19,7 +19,7 @@ angular.module('emistiApp').service('LocaleService', function($translate, LOCALE
     // asking angular-translate to load and apply proper translations
     $translate.use(locale);
   };
-  
+
   // on successful applying translations by angular-translate
   $rootScope.$on('$translateChangeSuccess', function(event, data) {
     document.documentElement.setAttribute('lang', data.language); // sets "lang" attribute to html

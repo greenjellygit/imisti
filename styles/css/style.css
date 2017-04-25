@@ -1,4 +1,12 @@
 @charset "UTF-8";
+.font-medium {
+  font-size: 0.9em;
+}
+
+.font-small {
+  font-size: 0.75em;
+}
+
 .ng-hide,
 .ng-hide-animate {
   display: none !important;
@@ -14,6 +22,26 @@
 
 .text-center {
   text-align: center;
+}
+
+.top-buffer-5 {
+  margin-top: 5px;
+}
+
+.top-buffer-10 {
+  margin-top: 10px;
+}
+
+.bottom-buffer-10 {
+  margin-bottom: 10px;
+}
+
+.bottom-buffer-20 {
+  margin-bottom: 20px;
+}
+
+.top-buffer-20 {
+  margin-top: 20px;
 }
 
 .top-buffer-25 {
@@ -52,6 +80,10 @@
   margin-left: -25px;
   margin-right: 8px;
   margin-bottom: 4px;
+}
+
+.round-panel.border {
+  border: 2px solid #ffb749;
 }
 
 .quoted-text:after {
@@ -2439,6 +2471,13 @@ header a[role="button"]:hover {
   transition-duration: 0s;
 }
 
+/*
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+}*/
 body {
   background-image: url("../images/background.png");
   background-color: #c7d1df;
@@ -2446,13 +2485,10 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  overflow: hidden;
 }
 
 .ui-view-container {
   position: relative;
-  height: 100%;
-  overflow: auto;
 }
 
 [ui-view].ng-enter,
@@ -2495,27 +2531,14 @@ body {
 }
 
 .news-panel {
-  height: 130px;
+  min-height: 130px;
   margin-bottom: 20px;
 }
 
 .news-image {
-  width: 180;
-  height: 100;
-  overflow: hidden;
-  position: relative;
-  margin-top: 5px;
-}
-
-.news-image > img {
-  position: absolute;
-  left: -100%;
-  right: -100%;
-  top: -100%;
-  bottom: -100%;
-  margin: auto;
-  width: auto;
-  height: auto;
+  width: 200px;
+  height: 130px;
+  object-fit: cover;
 }
 
 .news-date {
@@ -2543,11 +2566,53 @@ body {
 
 .news-title {
   font-size: 0.9em;
-  margin-left: 10px;
+  line-height: 16px;
 }
 
 .news-text {
-  font-size: 0.7em;
-  margin-left: 10px;
+  font-size: 0.75em;
+  line-height: 15px;
   margin-top: 5px;
+}
+
+.news-text > span {
+  white-space: pre-line;
+}
+
+.readMore-button {
+  transition: none;
+  background-color: #ffb749;
+  color: #1f2837;
+  box-shadow: none;
+  font-size: 0.7em;
+  padding: 3px 8px;
+  margin-left: 0;
+  border-radius: 0;
+}
+
+.loadMore-button {
+  transition: none;
+  background-color: #477ace;
+  color: #fcf8f4;
+  box-shadow: none;
+  padding: 5px 11px;
+  font-size: 0.9em;
+  margin: auto;
+  border-radius: 0;
+  margin-top: 20px;
+}
+
+.col-offer {
+  margin: auto;
+  flex-basis: 47%;
+  max-width: 47%;
+  min-height: 444px;
+}
+
+.offer-list {
+  margin-left: 0;
+}
+
+.offer-list > li {
+  margin-bottom: 4px;
 }

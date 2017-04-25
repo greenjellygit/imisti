@@ -1,8 +1,17 @@
 $color-emisti-cta: #ffb749;
 $color-emisti-dark-blue: #1f2837;
 $color-emisti-middle-blue: #303e55;
-$color-emisti-text: #fcf8f4;
+$color-emisti-light-blue: #477ace;
+$color-emisti-white: #fcf8f4;
 $color-emisti-transparent: rgba(0, 0, 0, 0.6);
+
+.font-medium {
+  font-size: 0.9em;
+}
+
+.font-small {
+  font-size: 0.75em;
+}
 
 .ng-hide,
 .ng-hide-animate {
@@ -19,6 +28,26 @@ $color-emisti-transparent: rgba(0, 0, 0, 0.6);
 
 .text-center {
   text-align: center;
+}
+
+.top-buffer-5 {
+  margin-top: 5px;
+}
+
+.top-buffer-10 {
+  margin-top: 10px;
+}
+
+.bottom-buffer-10 {
+  margin-bottom: 10px;
+}
+
+.bottom-buffer-20 {
+  margin-bottom: 20px;
+}
+
+.top-buffer-20 {
+  margin-top: 20px;
 }
 
 .top-buffer-25 {
@@ -57,6 +86,10 @@ $color-emisti-transparent: rgba(0, 0, 0, 0.6);
   margin-left: -25px;
   margin-right: 8px;
   margin-bottom: 4px;
+}
+
+.round-panel.border {
+  border: 2px solid $color-emisti-cta;
 }
 
 .quoted-text:after {
@@ -169,6 +202,13 @@ header a[role="button"]:hover {
   border-radius: 0;
   transition-duration: 0s;
 }
+/*
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+}*/
 
 body {
   background-image: url("../images/background.png");
@@ -177,13 +217,10 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  overflow: hidden;
 }
 
 .ui-view-container {
   position: relative;
-  height: 100%;
-  overflow: auto;
 }
 
 [ui-view].ng-enter,
@@ -230,27 +267,14 @@ body {
 //-------------------------------news
 
 .news-panel {
-  height: 130px;
+  min-height: 130px;
   margin-bottom: 20px;
 }
 
 .news-image {
-  width: 180;
-  height: 100;
-  overflow: hidden;
-  position: relative;
-  margin-top: 5px;
-}
-
-.news-image > img {
-  position: absolute;
-  left: -100%;
-  right: -100%;
-  top: -100%;
-  bottom: -100%;
-  margin: auto;
-  width: auto;
-  height: auto;
+  width: 200px;
+  height: 130px;
+  object-fit: cover;
 }
 
 .news-date {
@@ -258,7 +282,7 @@ body {
   height: 40px;
   text-align: center;
   color: $color-emisti-dark-blue;
-  background-color: $color-emisti-text;
+  background-color: $color-emisti-white;
   margin-left: -3px;
   margin-top: -3px;
   margin-right: 6px;
@@ -278,11 +302,54 @@ body {
 
 .news-title {
   font-size: 0.9em;
-  margin-left: 10px;
+  line-height: 16px;
 }
 
 .news-text {
-  font-size: 0.7em;
-  margin-left: 10px;
+  font-size: 0.75em;
+  line-height: 15px;
   margin-top: 5px;
+}
+
+.news-text > span {
+  white-space: pre-line;
+}
+
+.readMore-button {
+  transition: none;
+  background-color: $color-emisti-cta;
+  color: $color-emisti-dark-blue;
+  box-shadow: none;
+  font-size: 0.7em;
+  padding: 3px 8px;
+  margin-left: 0;
+  border-radius: 0;
+}
+
+.loadMore-button {
+  transition: none;
+  background-color: $color-emisti-light-blue;
+  color: $color-emisti-white;
+  box-shadow: none;
+  padding: 5px 11px;
+  font-size: 0.9em;
+  margin: auto;
+  border-radius: 0;
+  margin-top: 20px;
+}
+//-------------------------------offert
+
+.col-offer {
+  margin: auto;
+  flex-basis: 47%;
+  max-width: 47%;
+  min-height: 444px;
+}
+
+.offer-list {
+  margin-left: 0;
+}
+
+.offer-list > li {
+  margin-bottom: 4px;
 }

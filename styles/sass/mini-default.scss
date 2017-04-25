@@ -8,7 +8,7 @@
 	mini.css version: v2.1.2 (Fermion)
 */
 //	Basic rules for body and typography
-$fore-color:						$color-emisti-text;									// Text and general foreground color
+$fore-color:						$color-emisti-white;									// Text and general foreground color
 $back-color:						#f5f5f5;									// Body background color
 $base-font-family:																// Default font stack for all elements:
 	'\"Roboto\", \"Droid Sans\",\"Helvetica Neue\", Helvetica, Arial, sans-serif';
@@ -152,7 +152,7 @@ $grid-large-prefix:						'lg';									// Large screen class prefix for grid
 //	Variables for navigational elements
 $header-height:						44px;											// Height for <header>
 $header-back-color:				#1f2837;									// Background color for <header>
-$header-fore-color:				$color-emisti-text;									// Text color for <header>
+$header-fore-color:				$color-emisti-white;									// Text color for <header>
 $header-border-style:			0;												// Border style for <header>
 $header-margin:						0;												// Margin for <header>
 $header-padding:					2px 8px;									// Padding for <header>
@@ -184,7 +184,7 @@ $nav-sublink-bar-left-position: 3px;								// Left position of subcategory bar
 $nav-sublink-bar-width:		1px;											// Width of the subcategory bar
 $nav-sublink-bar-color:		#78909c;									// Subcategory bar color
 $footer-back-color:				$color-emisti-dark-blue;									// Background color for <footer>
-$footer-fore-color:				$color-emisti-text;									// Text color for <footer>
+$footer-fore-color:				$color-emisti-white;									// Text color for <footer>
 $footer-border-style:			0;												// Border stye for <footer>
 $footer-font-size:				75%;											// Font size for <footer>
 $footer-margin:						18px 0 0;									// Margin for <footer>
