@@ -5,14 +5,14 @@ angular.module("emistiApp").directive("readMore", function() {
       text: "=",
       maxLength: "@",
       isOverflowed: "=",
-      isMore: "="
+      isCollapsed: "="
     },
     link: function(scope) {
       var fullText = scope.text;
       scope.text = collapseText(scope.text, scope.maxLength);
       scope.isOverflowed = scope.text.length < fullText.length;
 
-      scope.$watch("isMore", function(val) {
+      scope.$watch("isCollapsed", function(val) {
         if(val) {
           scope.text = fullText;
         } else {

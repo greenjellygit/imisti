@@ -1,5 +1,16 @@
-<div class="top-buffer-25">
-  <div ng-repeat="news in newsList | orderBy: '-created_time'" class="row col-sm-10 col-sm-offset-1 news-panel">
+  <div ng-hide="isNewsLoaded" class="opacity-anim row">
+    <div class="loadingSpinner">
+      <svg width='90px' height='90px' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="uil-ring-alt"><rect x="0" y="0" width="100" height="100" fill="none" class="bk"></rect>
+        <circle cx="50" cy="50" r="40" stroke="#477ace" fill="none" stroke-width="12" stroke-linecap="round"></circle>
+        <circle cx="50" cy="50" r="40" stroke="#ffb749" fill="none" stroke-width="7" stroke-linecap="round">
+          <animate attributeName="stroke-dashoffset" dur="2s" repeatCount="indefinite" from="0" to="502"></animate>
+          <animate attributeName="stroke-dasharray" dur="2s" repeatCount="indefinite" values="175.7 75.30000000000001;1 250;175.7 75.30000000000001"></animate>
+        </circle>
+      </svg>
+    </div>
+  </div>
+<div ng-show="isNewsLoaded" class="top-buffer-25 opacity-anim">
+  <div ng-repeat="news in newsList | orderBy: '-created_time'" class="row col-sm-10 col-sm-offset-1 news-panel listItem">
     <div class="row col-sm-8 col-sm-offset-2 round-panel">
       <div class="col-sm-1 ">
         <div class="news-date">
@@ -14,12 +25,12 @@
       </div>
       <div class="col-sm-7">
         <div class="row news-title">{{news.title}}</div>
-        <div class="row news-text" ng-init="news.isMoreRequested = false;">
-          <span read-more max-length="250" text="news.text" is-more="news.isMore" is-overflowed="isOverflowed">{{news.text}}</span>
+        <div class="row news-text" collapse="!news.isCollapsed">
+          <span read-more max-length="250" text="news.text" is-collapsed="news.isCollapsed" is-overflowed="isOverflowed">{{news.text}}</span>
         </div>
         <div class="row">
-          <button class="readMore-button" ng-show="!news.isMore && isOverflowed" ng-click="news.isMore = true;">Czytaj więcej</button>
-          <button class="readMore-button" ng-show="news.isMore" ng-click="news.isMore = false;">Czytaj mniej...</button>
+          <button class="readMore-button" ng-show="!news.isCollapsed && isOverflowed" ng-click="news.isCollapsed = true;">Czytaj więcej</button>
+          <button class="readMore-button" ng-show="news.isCollapsed" ng-click="news.isCollapsed = false;">Czytaj mniej...</button>
         </div>
       </div>
     </div>
@@ -28,3 +39,4 @@
     <button class="loadMore-button" ng-if="!isLastPage" ng-click="loadNewsPage()">załaduj więcej</button>
   </div>
 </div>
+<div class="row top-buffer-50"></div>
