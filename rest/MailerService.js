@@ -25,7 +25,7 @@ function prepareEmail(emailData) {
 
 function sendEmail(emailData) {
   var email = prepareEmail(emailData);
-  transporter.sendMail(email, (error, info) => {
+  transporter.sendMail(email, function(error, info) {
     if (error) {
       return console.log(error);
     }
