@@ -191,9 +191,9 @@ $color-emisti-transparent: rgba(0, 0, 0, 0.6);
 }
 
 footer.fixed {
-  bottom: 0;
   position: fixed;
   width: 100%;
+  bottom: 0px;
 }
 
 a[role="button"].active,
@@ -209,7 +209,6 @@ header {
   z-index: 1;
   top: 0;
 }*/
-
 body {
   background-image: url("../images/background.png");
   background-color: rgba(199, 209, 223, 145);
@@ -217,17 +216,31 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  padding-bottom: 78px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
 }
 
 .ui-view-container {
   position: relative;
+  overflow-y: overlay;
+  overflow-x: hidden;
+  height: 100%
 }
 
-[ui-view].ng-enter,
+[ui-view].ng-enter {
+  position: relative;
+}
 [ui-view].ng-leave {
   position: absolute;
   left: 0;
   right: 0;
+  top: 0px;
+}
+
+[ui-view].ng-enter, [ui-view].ng-leave {
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
