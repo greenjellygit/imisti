@@ -8,7 +8,7 @@ var transporter = nodemailer.createTransport({
   }
 });
 
-const mailOptions = {
+var mailOptions = {
   to: 'emiliajaroszewska@imisti.pl',
 };
 
