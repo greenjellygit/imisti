@@ -5,7 +5,7 @@
   "main": "server.js",
   "author": "greenjelly",
   "scripts": {
-    "start": "gulp",
+    "start": "node --use_strict start.js",
     "postinstall": "export HOME=$HOME/app-root/runtime/repo; ./node_modules/bower/bin/bower install"
   },
   "dependencies": {
