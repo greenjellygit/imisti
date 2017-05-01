@@ -5,6 +5,11 @@ angular.module("emistiApp").controller("NavbarController", ["$scope", "$state", 
     };
 
     $scope.localeList = LocaleService.getLocaleList();
-    $scope.setLocale = LocaleService.setLocale;
+    $scope.currentLocaleName = LocaleService.getCurrentLocale();
+    
+    $scope.setLocale = function(index) {
+      LocaleService.setLocale(index);
+      $scope.currentLocaleName = LocaleService.getCurrentLocale();
+    };
   }
 ]);

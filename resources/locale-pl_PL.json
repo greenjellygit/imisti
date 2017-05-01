@@ -1,3 +1,64 @@
 {
-    "news.test": "Hejka! Tutaj przetłumaczony tekst."
+  "navbar": {
+    "main-page": "strona główna",
+    "news": "aktualności",
+    "offert": "oferta",
+    "contact": "kontakt"
+  },
+  "main-page": {
+    "header": "Meet Immigration Straight Team Initiatives",
+    "quotation": "Największą wartością państwa są ludzie, którzy je tworzą. Nasza firma nieustannie kieruje się tą zasadą. Dzięki nowatorskiemu podejściu i innowacyjnym rozwiązaniom skutecznie pomagamy obcokrajowcom w kwestiach imigracyjnych i wewnątrzpaństwowych.",
+    "value1": "szybka realizacja",
+    "value2": "łatwa komunikacja",
+    "value3": "przykładna jakość"
+  },
+  "news": {
+    "read-more": "Czytaj więcej...",
+    "read-less": "Czytaj mniej...",
+    "load-more": "załaduj więcej"
+  },
+  "offert": {
+    "header": "MISTI to efektywna agencja consultingowa skupiająca zespół profesjonalistów działających z pasją i pełnym zaangażowaniem w każdy projekt. Naszym głównym celem jest sukces naszych klientów. Pragniemy poprzez odpowiednie wykorzystanie naszego doświadczenia oraz nabytej wiedzy naszych pracowników zapewnić klientom profesjonalną obsługę.",
+    "button-contact": "Skontaktuj się",
+    "section1": {
+      "title": "Kwestie imigracyjne",
+      "val0": "Pomoc w uzyskaniu wizy lub zaproszenia",
+      "val1": "Przedłużenie każdego rodzaju wizy na terenie Rzeczpospolitej Polskiej",
+      "val2": "Uzyskanie zezwolenia na wykonywanie pracy na terytorium Rzeczpospolitej Polskiej",
+      "val3": "Oświadczenia o zamiarze powierzenia wykonywania pracy",
+      "val5": "Zezwolenia na pracę dla cudzoziemców",
+      "val4": "Zezwolenia na pobyt",
+      "val6": "Odwołania od negatywnych decyzji oraz skargi",
+      "val7": "Przygotowanie dokumentów niezbędnych do podjęcia pracy",
+      "val8": "Zaznajomienie pracowników z polskimi realiami"
+    },
+    "section2": {
+      "title": "Sprawy wewnątrzpaństowe",
+      "val0": "Uzyskanie opinii z powiatowego urzędu pracy",
+      "val1": "Uzyskanie zaświadczenia o niekaralności z Krajowego Rejestru Karnego",
+      "val2": "Projektowanie stron internetowych",
+      "val3": "Przygotowywanie materiałów reklamowych",
+      "val4": "Pomoc w zakładaniu działalności gospodarczej lub spółek na terytorium Rzeczpospolitej Polskiej",
+      "val5": "Wnioski o niezaleganiu od ZUS",
+      "val6": "Wyszukiwanie mieszkań, domów i szkół",
+      "val7": "Tłumaczenia"
+    },
+    "footer": "Nasi współpracownicy pomagają w wypełnieniu wniosków wizowych, zebraniu potrzebnych dokumentów i utrzymywaniu stałego kontaktu z pracownikami. Współpracują także w naszym imieniu z miejscowymi urzędami, na bieżąco monitorując proces uzyskiwania niezbędnych dokumentów. W przypadku nieznajomości języka polskiego zapewniamy pomoc tłumacza w języku angielskim, ukraińskim, lub rosyjskim."
+  },
+  "contact": {
+    "header": "Potrzebujesz profesjonalnego wsparcia w legalizacji pracy cudzoziemca?",
+    "sub-header": "Tu dowiesz się, jak zalegalizować swój pobyt, uzyskać zezwolenie na pracę, zaprosić cudzoziemca do naszego kraju, zostać obywatelem Polski.",
+    "people-list-title": "Dane kontaktowe:",
+    "form": {
+      "title": "Zachęcamy również do bezpośredniego kontaktu z naszym działem za pomocą poniższego formularza:",
+      "field-name": "Imię",
+      "field-email": "Twój email",
+      "field-subject": "Temat",
+      "field-message": "Wiadomość",
+      "button-send": "Wyslij",
+      "thanks": "Dziękujemy za wiadomość! Wkrótce się skontaktujemy.",
+      "validation-required": "Pole jest wymagane.",
+      "validation-email": "Podany adres email jest niepoprawny."
+    }
+  }
 }

@@ -6,7 +6,8 @@
   "author": "greenjelly",
   "scripts": {
     "start": "node --use_strict server.js",
-    "postinstall": "export HOME=$HOME/app-root/runtime/repo; ./node_modules/bower/bin/bower install"
+    "postinstall": "export HOME=$HOME/app-root/runtime/repo; ./node_modules/bower/bin/bower install",
+    "gulp": "gulp"
   },
   "dependencies": {
     "body-parser": "^1.4.3",

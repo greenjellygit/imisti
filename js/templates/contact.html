@@ -2,34 +2,34 @@
   <div class="row col-sm-8 col-sm-offset-2 round-panel">
     <div class="col-sm-10 col-sm-offset-1 top-buffer-10 bottom-buffer-20">
       <div class="font-big">
-        Potrzebujesz profesjonalnego wsparcia w legalizacji pracy cudzoziemca?
+        {{'contact.header' | translate}}
       </div>
       <div class="font-small top-buffer-5">
-        Tu dowiesz się, jak zalegalizować swój pobyt, uzyskać zezwolenie na pracę, zaprosić cudzoziemca do naszego kraju, zostać obywatelem Polski.
+        {{'contact.sub-header' | translate}}
       </div>
       <div class="font-big top-buffer-25">
-        Dane kontaktowe:
+        {{'contact.people-list-title' | translate}}
       </div>
       <div class="font-small top-buffer-5">
         Emilia Jaroszewska <a href="mailto:emiliajaroszewska@imisti.pl">emiliajaroszewska@imisti.pl</a>
       </div>
       <div class="font-small top-buffer-25">
-        Zachęcamy również do bezpośredniego kontaktu z naszym działem za pomocą poniższego formularza:
+        {{'contact.form.title' | translate}}
       </div>
       <div ng-form="contactForm" ng-hide="isEmailSend" class="font-small top-buffer-10 col-sm-6 col-sm-offset-3 text-right">
-        <input name="name" type="text" autocomplete="off" class="round-input" placeholder="Imię" ng-model="emailData.name" required/>
-        <span ng-show="contactForm.name.$touched && contactForm.name.$error.required">Pole jest wymagane.</span>
-        <input name="email" type="email" autocomplete="off" class="round-input" placeholder="Twój email" ng-model="emailData.email" required/>
-        <span ng-show="contactForm.email.$touched && contactForm.email.$error.required">Pole jest wymagane.</span>
-        <span ng-show="contactForm.email.$touched && contactForm.email.$error.email">Podany adres email jest niepoprawny.</span>
-        <input name="subject" type="text" autocomplete="off" class="round-input" placeholder="Temat" ng-model="emailData.subject" required/>
-        <span ng-show="contactForm.subject.$touched && contactForm.subject.$error.required">Pole jest wymagane.</span>
-        <textarea name="text" class="round-input bottom-buffer-10" style="height: 200px;" placeholder="Treść wiadomości" ng-model="emailData.text" required></textarea>
-        <div class="bottom-buffer-10" ng-show="contactForm.text.$touched && contactForm.text.$error.required">Pole jest wymagane.</div>
-        <button ng-disabled="contactForm.$invalid" class="send-button top-buffer-10" ng-click="sendEmail()">Wyślij</button>
+        <input name="name" type="text" autocomplete="off" class="round-input" placeholder="{{'contact.form.field-name' | translate}}" ng-model="emailData.name" required/>
+        <span ng-show="contactForm.name.$touched && contactForm.name.$error.required">{{'contact.form.validation-required' | translate}}</span>
+        <input name="email" type="email" autocomplete="off" class="round-input" placeholder="{{'contact.form.field-email' | translate}}" ng-model="emailData.email" required/>
+        <span ng-show="contactForm.email.$touched && contactForm.email.$error.required">{{'contact.form.validation-required' | translate}}</span>
+        <span ng-show="contactForm.email.$touched && contactForm.email.$error.email">{{'contact.form.validation-email' | translate}}</span>
+        <input name="subject" type="text" autocomplete="off" class="round-input" placeholder="{{'contact.form.field-subject' | translate}}" ng-model="emailData.subject" required/>
+        <span ng-show="contactForm.subject.$touched && contactForm.subject.$error.required">{{'contact.form.validation-required' | translate}}</span>
+        <textarea name="text" class="round-input bottom-buffer-10" style="height: 200px;" placeholder="{{'contact.form.field-message' | translate}}" ng-model="emailData.text" required></textarea>
+        <div class="bottom-buffer-10" ng-show="contactForm.text.$touched && contactForm.text.$error.required">{{'contact.form.validation-required' | translate}}</div>
+        <button ng-disabled="contactForm.$invalid" class="send-button top-buffer-10" ng-click="sendEmail()">{{'contact.form.button-send' | translate}}</button>
       </div>
       <div ng-show="isEmailSend" class="col-sm-8 col-sm-offset-2 font-big text-center top-buffer-25">
-        Dziękujemy za wiadomość! Wkrótce się skontaktujemy.
+        {{'contact.form.thanks' | translate}}
       </div>
     </div>
   </div>

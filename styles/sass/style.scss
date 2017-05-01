@@ -100,6 +100,36 @@ a[href] {
   color: $color-emisti-middle-blue;
 }
 
+
+.locale-list {
+  display: inline-block;
+  padding-top: 6px;
+  margin: 6px 0px;
+  padding-left: 14px;
+}
+
+.locale-list>li {
+  margin: 0 3px;
+  width: 27px;
+  display: inline-block;
+  height: 17px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.locale-list>li[value="en_US"] {
+  background-image: url("../images/locale_en.png");
+}
+
+.locale-list>li[value="pl_PL"] {
+  background-image: url("../images/locale_pl.png");
+}
+
+.locale-list>li.active {
+  outline: 2px solid $color-emisti-cta;
+}
+
 .quoted-text:before {
   content: "";
   background-image: url("../images/quote.png");
@@ -208,6 +238,7 @@ a[href] {
 .companyValues {
   color: $color-emisti-middle-blue;
   font-size: $h1-font-size;
+  text-transform: uppercase;
 }
 
 .companyValues > * {

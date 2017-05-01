@@ -29,14 +29,14 @@
           <span read-more max-length="250" text="news.text" is-collapsed="news.isCollapsed" is-overflowed="isOverflowed">{{news.text}}</span>
         </div>
         <div class="row">
-          <button class="readMore-button" ng-show="!news.isCollapsed && isOverflowed" ng-click="news.isCollapsed = true;">Czytaj więcej</button>
-          <button class="readMore-button" ng-show="news.isCollapsed" ng-click="news.isCollapsed = false;">Czytaj mniej...</button>
+          <button class="readMore-button" ng-show="!news.isCollapsed && isOverflowed" ng-click="news.isCollapsed = true;">{{'news.read-more' | translate}}</button>
+          <button class="readMore-button" ng-show="news.isCollapsed" ng-click="news.isCollapsed = false;">{{'news.read-less' | translate}}</button>
         </div>
       </div>
     </div>
   </div>
   <div class="row">
-    <button class="loadMore-button" ng-if="!isLastPage" ng-click="loadNewsPage()">załaduj więcej</button>
+    <button class="loadMore-button" ng-if="!isLastPage" ng-click="loadNewsPage()">{{'news.load-more' | translate}}</button>
   </div>
 </div>
 <div class="row top-buffer-50"></div>

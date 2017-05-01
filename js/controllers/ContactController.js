@@ -5,11 +5,16 @@ angular.module("emistiApp").controller("ContactController", ["$scope", "ContactS
     name: "",
     email: "",
     subject: "",
-    text: ""
+    text: "",
+    attachments: [],
   };
 
   $scope.sendEmail = function() {
     ContactService.sendEmail($scope.emailData);
     $scope.isEmailSend = true;
   };
+
+  $scope.addFile = function(file) {
+    $scope.emailData.attachments.push(file);
+  }
 }]);
