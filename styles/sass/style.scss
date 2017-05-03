@@ -483,13 +483,6 @@ body {
 }
 //-------------------------------offert
 
-.col-offer {
-  margin: auto;
-  flex-basis: 47%;
-  max-width: 47%;
-  min-height: 444px;
-}
-
 .offer-list {
   margin-left: 0;
   min-height: 280px;
@@ -497,4 +490,13 @@ body {
 
 .offer-list > li {
   margin-bottom: 4px;
+}
+
+@media screen and (min-width: 768px) {
+  .col-offer {
+    margin: auto;
+    flex-basis: 47%;
+    max-width: 47%;
+    min-height: 444px;
+  }
 }

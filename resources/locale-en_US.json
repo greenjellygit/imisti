@@ -2,7 +2,7 @@
   "navbar": {
     "main-page": "main page",
     "news": "news",
-    "offert": "offert",
+    "offer": "offer",
     "contact": "contact us"
   },
   "main-page":  {
@@ -17,7 +17,7 @@
     "read-less": "Read less...",
     "load-more": "Load more"
   },
-  "offert": {
+  "offer": {
     "header": "MISTI is experienced team of consultants has been providing expert legal advice for many years. Our customers' satisfaction is our success, therefore our goal is to satisfy you. Our experience, know-how and office practices makes us the perfect choice to handle any type of case.",
     "button-contact": "Contact us",
     "section1": {
