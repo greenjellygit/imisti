@@ -32,3 +32,4 @@ gulp.task('server', function() {
 });
 
 gulp.task('default', sequence('bower', ['css'], 'server'));
+gulp.task('prod', ['css']);
