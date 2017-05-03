@@ -1,5 +1,6 @@
 var http = require('http');
 var express = require('express');
+var favicon = require('serve-favicon');
 var bodyParser = require('body-parser');
 var util = require('util');
 var unirest = require('unirest');
@@ -15,6 +16,7 @@ app.use(bodyParser.urlencoded({
   'extended': 'false'
 }));
 app.use(bodyParser.json());
+app.use(favicon(__dirname + '/styles/images/favicon/favicon.ico'));
 
 app.get('/', function(req, res) {
   res.render('index.html');
