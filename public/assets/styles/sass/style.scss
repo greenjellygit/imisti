@@ -119,11 +119,11 @@ a[href] {
 }
 
 .locale-list>li[value="en_US"] {
-  background-image: url("../images/locale_en.png");
+  background-image: url("/assets/images/locale_en.png");
 }
 
 .locale-list>li[value="pl_PL"] {
-  background-image: url("../images/locale_pl.png");
+  background-image: url("/assets/images/locale_pl.png");
 }
 
 .locale-list>li.active {
@@ -136,7 +136,7 @@ a[href] {
 
 .quoted-text:before {
   content: "";
-  background-image: url("../images/quote.png");
+  background-image: url("/assets/images/quote.png");
   width: 17px;
   height: 13px;
   background-repeat: no-repeat;
@@ -152,7 +152,7 @@ a[href] {
 
 .quoted-text:after {
   content: "";
-  background-image: url("../images/quote.png");
+  background-image: url("/assets/images/quote.png");
   position: absolute;
   width: 17px;
   height: 13px;
@@ -177,7 +177,7 @@ a[href] {
 
 .logo-misti-small {
   float: left;
-  background-image: url("../images/logo_small.png");
+  background-image: url("/assets/images/logo_small.png");
   background-repeat: no-repeat;
   width: 134px;
   height: 35px;
@@ -203,7 +203,7 @@ a[href] {
 }
 
 .logo-misti-big {
-  background-image: url("../images/logo_big.png");
+  background-image: url("/assets/images/logo_big.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -213,7 +213,7 @@ a[href] {
 }
 
 .poland {
-  background-image: url("../images/poland.png");
+  background-image: url("/assets/images/poland.png");
   background-repeat: no-repeat;
   background-position: center;
   height: 118px;
@@ -232,15 +232,15 @@ a[href] {
 }
 
 .companyValue-1 {
-  background-image: url("../images/company_value1.png");
+  background-image: url("/assets/images/company_value1.png");
 }
 
 .companyValue-2 {
-  background-image: url("../images/company_value2.png");
+  background-image: url("/assets/images/company_value2.png");
 }
 
 .companyValue-3 {
-  background-image: url("../images/company_value3.png");
+  background-image: url("/assets/images/company_value3.png");
 }
 
 .companyValues {
@@ -286,7 +286,7 @@ header {
 }*/
 
 body {
-  background-image: url("../images/background.png");
+  background-image: url("/assets/images/background.png");
   background-color: rgba(199, 209, 223, 145);
   background-blend-mode: overlay;
   background-repeat: no-repeat;

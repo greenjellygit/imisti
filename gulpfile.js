@@ -6,8 +6,8 @@ var server = require('gulp-express');
 var sequence = require('gulp-sequence')
 
 var config = {
-  sassPath: 'styles/sass',
-  bowerDir: 'bower_components'
+  sassPath: 'public/assets/styles/sass',
+  bowerDir: 'public/bower_components'
 }
 
 gulp.task('bower', function() {
@@ -22,7 +22,7 @@ gulp.task('css', function() { 
       outputStyle: 'expanded',
        includePaths: [  config.bowerDir + '/mini.css/src/mini/' ] 
     })) 
-    .pipe(gulp.dest('./styles/css')); 
+    .pipe(gulp.dest('public/assets/styles/css')); 
 });
 
 gulp.task('server', function() {

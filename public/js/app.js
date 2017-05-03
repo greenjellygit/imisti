@@ -42,7 +42,7 @@ angular.module("emistiApp").config(['$stateProvider', "$urlRouterProvider", "$lo
   })
   .config(function($translateProvider) {
     $translateProvider.useStaticFilesLoader({
-      prefix: 'resources/locale-', // path to translations files
+      prefix: 'assets/i18n/locale-', // path to translations files
       suffix: '.json' // suffix, currently- extension of the translations
     });
     $translateProvider.preferredLanguage('pl_PL'); // is applied on first load
