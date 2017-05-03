@@ -130,6 +130,10 @@ a[href] {
   outline: 2px solid $color-emisti-cta;
 }
 
+.quoted-text {
+  margin: 10px 20px;
+}
+
 .quoted-text:before {
   content: "";
   background-image: url("../images/quote.png");
@@ -202,8 +206,9 @@ a[href] {
   background-image: url("../images/logo_big.png");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: contain;
   height: 166px;
-  width: 400px;
+  width: 100%;
   margin: auto;
 }
 
@@ -211,6 +216,9 @@ a[href] {
   background-image: url("../images/poland.png");
   background-repeat: no-repeat;
   background-position: center;
+  height: 118px;
+  width: 100%;
+  background-size: contain;
 }
 
 [class^="companyValue-"] {
