@@ -100,15 +100,14 @@ a[href] {
   color: $color-emisti-middle-blue;
 }
 
-
 .locale-list {
   display: inline-block;
   padding-top: 6px;
-  margin: 6px 0px;
+  margin: 6px 0;
   padding-left: 14px;
 }
 
-.locale-list>li {
+.locale-list > li {
   margin: 0 3px;
   width: 27px;
   display: inline-block;
@@ -118,15 +117,15 @@ a[href] {
   cursor: pointer;
 }
 
-.locale-list>li[value="en_US"] {
+.locale-list > li[value="en_US"] {
   background-image: url("/assets/images/locale_en.png");
 }
 
-.locale-list>li[value="pl_PL"] {
+.locale-list > li[value="pl_PL"] {
   background-image: url("/assets/images/locale_pl.png");
 }
 
-.locale-list>li.active {
+.locale-list > li.active {
   outline: 2px solid $color-emisti-cta;
 }
 
@@ -284,13 +283,13 @@ header {
   z-index: 1;
   top: 0;
 }*/
-
 body {
   background-image: url("/assets/images/background.png");
   background-color: rgba(199, 209, 223, 145);
   background-blend-mode: overlay;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   background-attachment: fixed;
   padding-bottom: 78px;
   position: fixed;
@@ -491,7 +490,6 @@ body {
 .offer-list > li {
   margin-bottom: 4px;
 }
-
 @media screen and (min-width: 768px) {
   .col-offer {
     margin: auto;

@@ -16,10 +16,10 @@
 <body ng-app="emistiApp">
   <header ng-controller="NavbarController" class="text-right">
     <a ui-sref="home" ng-class="{'active': isLogoVisible()}" class="logo-misti-small" ng-cloak></a>
-    <a ui-sref="home" ui-sref-active="active" role="button">{{'navbar.main-page' | translate}}</a>
-    <a ui-sref="news" ui-sref-active="active" role="button">{{'navbar.news' | translate}}</a>
-    <a ui-sref="offer" ui-sref-active="active" role="button">{{'navbar.offer' | translate}}</a>
-    <a ui-sref="contact" ui-sref-active="active" role="button">{{'navbar.contact' | translate}}</a>
+    <a ui-sref="home" ui-sref-active="active" role="button" translate="navbar.main-page"></a>
+    <a ui-sref="news" ui-sref-active="active" role="button" translate="navbar.news"></a>
+    <a ui-sref="offer" ui-sref-active="active" role="button" translate="navbar.offer"></a>
+    <a ui-sref="contact" ui-sref-active="active" role="button" translate="navbar.contact"></a>
     <ul class="locale-list">
       <li ng-repeat="locale in localeList" ng-class="{'active' : currentLocaleName == locale.name}" ng-attr-value="{{locale.name}}" ng-click="setLocale($index)">
       </li>
