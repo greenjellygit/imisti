@@ -11,12 +11,12 @@ var app = express();
 app.set('port', process.env.OPENSHIFT_NODEJS_PORT || 8080);
 app.set('ip', process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1');
 
-app.use(express.static(__dirname + '/public/'));
+app.use(express.static(__dirname + '/dist/'));
 app.use(bodyParser.urlencoded({
   'extended': 'false'
 }));
 app.use(bodyParser.json());
-app.use(favicon(__dirname + '/public/assets/images/favicon/favicon.ico'));
+app.use(favicon(__dirname + '/dist/assets/images/favicon/favicon.ico'));
 
 app.get('/', function(req, res) {
   res.render('index.html');

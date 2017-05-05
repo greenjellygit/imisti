@@ -1,0 +1,41 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/assets/styles/style.min.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="assets/images/favicon/manifest.json">
+  <link rel="mask-icon" href="assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-config" content="assets/images/favicon/browserconfig.xml" />
+  <meta name="theme-color" content="#000103">
+  <title>imisti</title>
+</head>
+
+<body ng-app="emistiApp">
+  <header ng-controller="NavbarController" class="text-right">
+    <a ui-sref="home" ng-class="{'active': isLogoVisible()}" class="logo-misti-small" ng-cloak></a>
+    <a ui-sref="home" ui-sref-active="active" role="button" translate="navbar.main-page"></a>
+    <a ui-sref="news" ui-sref-active="active" role="button" translate="navbar.news"></a>
+    <a ui-sref="offer" ui-sref-active="active" role="button" translate="navbar.offer"></a>
+    <a ui-sref="contact" ui-sref-active="active" role="button" translate="navbar.contact"></a>
+    <ul class="locale-list">
+      <li ng-repeat="locale in localeList" ng-class="{'active' : currentLocaleName == locale.name}" ng-attr-value="{{locale.name}}" ng-click="setLocale($index)">
+      </li>
+    </ul>
+  </header>
+  </div>
+  <main class="ui-view-container">
+    <div class="container" ui-view></div>
+  </main>
+
+  <div class="top-buffer-50"></div>
+  <footer class="fixed text-center">
+    <p>2017 by MISTI</p>
+  </footer>
+  <script src="/js/lib.min.js"></script>
+  <script src="/js/app.min.js"></script>
+</body>
+
+</html>

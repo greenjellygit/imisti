@@ -1,0 +1,64 @@
+{
+  "navbar": {
+    "main-page": "main page",
+    "news": "news",
+    "offer": "offer",
+    "contact": "contact us"
+  },
+  "main-page":  {
+    "header": "Meet Immigration Straight Team Initiatives",
+    "quotation": "The greatest value of the state are the people who create them. Our company is constantly guided by this principle. Thanks to original approach and innovative solutions, we help foreigners in immigration and in-country issues effectively.",
+    "value1": "quick realization",
+    "value2": "easy to communication",
+    "value3": "good quality"
+  },
+  "news": {
+    "read-more": "Read more...",
+    "read-less": "Read less...",
+    "load-more": "Load more"
+  },
+  "offer": {
+    "header": "MISTI is experienced team of consultants has been providing expert legal advice for many years. Our customers' satisfaction is our success, therefore our goal is to satisfy you. Our experience, know-how and office practices makes us the perfect choice to handle any type of case.",
+    "button-contact": "Contact us",
+    "section1": {
+      "title": "Immigration",
+      "val0": "Assistance in obtaining a Polish visa",
+      "val1": "Prolonging any type of visa in Poland",
+      "val2": "Employer declaration",
+      "val3": "Declaration of intention to employ",
+      "val4": "Residence permit",
+      "val5": "Work permit",
+      "val6": "Appeals and complaints",
+      "val7": "Assistance in obtaining a work permit",
+      "val8": "Assistance in adapting to a new place of residence"
+    },
+    "section2": {
+      "title": "Intra-state issues",
+      "val0": "Overseas police check",
+      "val1": "Obtaining a certificate from KRS",
+      "val2": "Web desing",
+      "val3": "Advertising services",
+      "val4": "Company registration",
+      "val5": "Social security contribution clearance certificate",
+      "val6": "Assistance in searching for apartments, houses and schools",
+      "val7": "Specialised translation services"
+    },
+    "footer": "Nasi współpracownicy pomagają w wypełnieniu wniosków wizowych, zebraniu potrzebnych dokumentów i utrzymywaniu stałego kontaktu z pracownikami. Współpracują także w naszym imieniu z miejscowymi urzędami, na bieżąco monitorując proces uzyskiwania niezbędnych dokumentów. W przypadku nieznajomości języka polskiego zapewniamy pomoc tłumacza w języku angielskim, ukraińskim, lub rosyjskim."
+  },
+  "contact": {
+    "header": "Do you need assistance in obtaining a work permit?",
+    "sub-header": "Here you will learn how to legalize your stay, get a work permit, invite a foreigner to our country, become a Polish citizen.",
+    "people-list-title": "Contact details:",
+    "form": {
+      "title": "We also encourage you to contact our department directly using the form below:",
+      "field-name": "Name",
+      "field-email": "Your email",
+      "field-subject": "Subject",
+      "field-message": "Message",
+      "button-send": "Send",
+      "thanks": "Thank you for your message! We will be in touch shortly.",
+      "validation-required": "Field is required.",
+      "validation-email": "Email address is invalid."
+    }
+  }
+}
