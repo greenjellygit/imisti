@@ -67,6 +67,12 @@ gulp.task('copy-angular-i18n', function() {
     .pipe(gulp.dest('dist/js/external/angular-i18n/'));
 });
 
+gulp.task('copy-angular-i18n-minified', function() {
+  return gulp.src([config.bowerDir + '/angular-i18n/angular-locale_en-us.js', config.bowerDir + '/angular-i18n/angular-locale_pl-pl.js', config.bowerDir + '/angular-i18n/angular-locale_ru-ru.js'])
+    .pipe(jsWork())
+    .pipe(gulp.dest('dist/js/external/angular-i18n/'));
+});
+
 gulp.task('watch', function() {
   gulp.watch(config.sassPath + '/**/*.scss', ["reload-css"]); 
   gulp.watch(config.jsPath + '/**/*.js', ["reload-js"]); 
@@ -95,4 +101,4 @@ gulp.task('server', function() {
 });
 
 gulp.task('dev', sequence('bower', ['sass'], ['concatenation'], 'copy-assets', 'copy-html', 'copy-angular-i18n', 'watch', 'server'));
-gulp.task('prod', sequence('sass', ['minification'], 'copy-assets', 'copy-html', 'copy-angular-i18n'));
+gulp.task('prod', sequence('sass', ['minification'], 'copy-assets', 'copy-html', 'copy-angular-i18n-minified'));
