@@ -71,6 +71,10 @@ a[href] {
   opacity: 0;
 }
 
+.capitalize::first-letter {
+  text-transform: capitalize;
+}
+
 .opacity-anim.ng-hide-add,
 .opacity-anim.ng-hide-remove {
   transition: opacity linear 0.5s;

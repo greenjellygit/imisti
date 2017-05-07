@@ -1,3 +1,8 @@
+<div class="row top-buffer-20">
+  <div class="col-sm-12 text-center">
+    <h1 class="dark-blue-color capitalize">{{'navbar.news' | translate}}</h1>
+  </div>
+</div>
 <div ng-hide="isNewsLoaded" class="opacity-anim row">
   <div class="loadingSpinner">
     <svg width='90px' height='90px' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="uil-ring-alt"><rect x="0" y="0" width="100" height="100" fill="none" class="bk"></rect>
@@ -9,7 +14,7 @@
       </svg>
   </div>
 </div>
-<div ng-show="isNewsLoaded" class="top-buffer-25 opacity-anim">
+<div ng-show="isNewsLoaded" class="top-buffer-5 opacity-anim">
   <div ng-repeat="news in newsList | orderBy: '-created_time'" class="row col-sm-12 col-md-10 col-md-offset-1 news-panel listItem">
     <div class="row col-sm-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 round-panel">
       <div class="col-sm-2 col-md-1">
