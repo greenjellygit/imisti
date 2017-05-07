@@ -49,5 +49,5 @@ angular.module("emistiApp").config(['$stateProvider', "$urlRouterProvider", "$lo
     $translateProvider.useLocalStorage(); // saves selected language to localStorage
   })
   .config(function(tmhDynamicLocaleProvider) {
-    tmhDynamicLocaleProvider.localeLocationPattern('bower_components/angular-i18n/angular-locale_{{locale}}.js');
+    tmhDynamicLocaleProvider.localeLocationPattern('js/external/angular-i18n/angular-locale_{{locale}}.js');
   });

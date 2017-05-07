@@ -13,6 +13,7 @@ var ngAnnotate = require('gulp-ng-annotate');
 
 var config = {
   sassPath: 'public/assets/styles/sass',
+  jsPath: 'public/js',
   bowerDir: 'public/bower_components'
 }
 
@@ -43,6 +44,12 @@ gulp.task('minification', function() {
     .pipe(gulp.dest('dist'));
 });
 
+gulp.task('concatenation', function() {
+  return gulp.src('public/index.html')
+    .pipe(useref())
+    .pipe(gulp.dest('dist'));
+});
+
 gulp.task('copy-assets', function() {
   return gulp.src(['public/assets/**', '!public/assets/styles{,/**}'])
     .pipe(gulp.dest('dist/assets/'));
@@ -53,11 +60,27 @@ gulp.task('copy-html', function() {
     .pipe(gulp.dest('dist/js/'));
 });
 
-gulp.task('server', function() {
-  server.run(['server.js']);
-
-  gulp.watch(config.sassPath + '/**/*.scss', ['sass']); 
+gulp.task('copy-angular-i18n', function() {
+  return gulp.src([config.bowerDir + '/angular-i18n/angular-locale_en-us.js', config.bowerDir + '/angular-i18n/angular-locale_pl-pl.js', config.bowerDir + '/angular-i18n/angular-locale_ru-ru.js'])
+    .pipe(gulp.dest('dist/js/external/angular-i18n/'));
 });
 
-gulp.task('dev', sequence('bower', ['sass'], 'server'));
-gulp.task('prod', sequence('sass', ['minification'], 'copy-assets', 'copy-html'));
+gulp.task('watch', function() {
+  gulp.watch(config.sassPath + '/**/*.scss', ["reload-css"]); 
+  gulp.watch(config.jsPath + '/**/*.js', ["reload-js"]); 
+});
+
+gulp.task('reload-css', function(callback) {
+  sequence('sass', 'concatenation', 'copy-assets')(callback);
+});
+
+gulp.task('reload-js', function(callback) {
+  sequence('concatenation')(callback);
+});
+
+gulp.task('server', function() {
+  server.run(['server.js']);
+});
+
+gulp.task('dev', sequence('bower', ['sass'], ['concatenation'], 'copy-assets', 'copy-html', 'copy-angular-i18n', 'watch', 'server'));
+gulp.task('prod', sequence('sass', ['minification'], 'copy-assets', 'copy-html', 'copy-angular-i18n'));
