@@ -49,7 +49,7 @@ angular.module("emistiApp").config(['$stateProvider', "$urlRouterProvider", "$lo
       prefix: 'assets/i18n/locale-', // path to translations files
       suffix: '.json' // suffix, currently- extension of the translations
     });
-    $translateProvider.preferredLanguage('pl_PL'); // is applied on first load
+    $translateProvider.preferredLanguage('en_US'); // is applied on first load
     $translateProvider.useLocalStorage(); // saves selected language to localStorage
   })
   .config(function(tmhDynamicLocaleProvider) {
