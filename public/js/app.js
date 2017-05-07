@@ -35,6 +35,10 @@ angular.module("emistiApp").config(['$stateProvider', "$urlRouterProvider", "$lo
         name: 'pl_PL',
         displayName: 'Polski'
       },
+      {
+        name: 'ru_RU',
+        displayName: 'Pусский'
+      },
     ]
   })
   .config(function($translateProvider) {

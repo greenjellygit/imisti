@@ -125,6 +125,10 @@ a[href] {
   background-image: url("/assets/images/locale_pl.png");
 }
 
+.locale-list > li[value="ru_RU"] {
+  background-image: url("/assets/images/locale_ru.png");
+}
+
 .locale-list > li.active {
   outline: 2px solid $color-emisti-cta;
 }

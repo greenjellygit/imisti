@@ -14,6 +14,8 @@ var ngAnnotate = require('gulp-ng-annotate');
 var config = {
   sassPath: 'public/assets/styles/sass',
   jsPath: 'public/js',
+  htmlPath: 'public/js/templates',
+  assetsPath: 'public/assets',
   bowerDir: 'public/bower_components'
 }
 
@@ -68,14 +70,24 @@ gulp.task('copy-angular-i18n', function() {
 gulp.task('watch', function() {
   gulp.watch(config.sassPath + '/**/*.scss', ["reload-css"]); 
   gulp.watch(config.jsPath + '/**/*.js', ["reload-js"]); 
+  gulp.watch(config.htmlPath + '/**/*.html', ["reload-html"]); 
+  gulp.watch(config.assetsPath + '/**/*.*', ["reload-assets"]); 
 });
 
 gulp.task('reload-css', function(callback) {
   sequence('sass', 'concatenation', 'copy-assets')(callback);
 });
 
+gulp.task('reload-html', function(callback) {
+  sequence('copy-html')(callback);
+});
+
 gulp.task('reload-js', function(callback) {
   sequence('concatenation')(callback);
+});
+
+gulp.task('reload-assets', function(callback) {
+  sequence('copy-assets')(callback);
 });
 
 gulp.task('server', function() {
