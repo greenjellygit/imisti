@@ -1,21 +1,21 @@
 var q = require('q');
 var util = require('util');
 var unirest = require('unirest');
+var config = require('./Configuration.js');
 
-const pageId = "284449561997051";
 var accessToken = null;
 
 const urls = {
   appAccesToken: "https://graph.facebook.com/oauth/access_token",
-  fanpagePosts: "https://graph.facebook.com/" + pageId + "/posts?fields=full_picture,picture,message,created_time"
+  fanpagePosts: "https://graph.facebook.com/" + config.FB_IMISTI_PAGE_ID + "/posts?fields=full_picture,picture,message,created_time"
 };
 
 function getAccessToken() {
   util.log('GET request: FB api access_token');
   unirest.get(urls.appAccesToken)
     .query({
-      client_id: '463956137276928',
-      client_secret: 'b6dbb81347dfa93bbf63470f064c1fae',
+      client_id: config.FB_CLIENT_ID,
+      client_secret: config.FB_CLIENT_SECRET,
       grant_type: 'client_credentials'
     })
     .end(function(res) {

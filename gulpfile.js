@@ -59,5 +59,5 @@ gulp.task('server', function() {
   gulp.watch(config.sassPath + '/**/*.scss', ['sass']); 
 });
 
-gulp.task('default', sequence('bower', ['sass'], 'server'));
+gulp.task('dev', sequence('bower', ['sass'], 'server'));
 gulp.task('prod', sequence('sass', ['minification'], 'copy-assets', 'copy-html'));
