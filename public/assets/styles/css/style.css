@@ -2542,8 +2542,8 @@ header {
   top: 0;
 }*/
 body {
-  background-image: url("/assets/images/background.png");
-  background-color: #c7d1df;
+  background-image: url("/assets/images/background.jpg");
+  background-color: #afbbcc;
   background-blend-mode: overlay;
   background-repeat: no-repeat;
   background-size: cover;
