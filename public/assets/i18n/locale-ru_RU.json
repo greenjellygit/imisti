@@ -7,15 +7,15 @@
   },
   "main-page": {
     "header": "Meet Immigration Straight Team Initiatives",
-    "quotation": "Największą wartością państwa są ludzie, którzy je tworzą. Nasza firma nieustannie kieruje się tą zasadą. Dzięki nowatorskiemu podejściu i innowacyjnym rozwiązaniom skutecznie pomagamy obcokrajowcom w kwestiach imigracyjnych i wewnątrzpaństwowych.",
+    "quotation": " Самая большая ценность государства-это люди, которые его создают. Наша компания постоянно руководствуется этим принципом. Благодаря инновационному подходу и инновационным решениям, эффективно помогаем иностранцам в вопросах иммиграции.",
     "value1": "быстрая реализация",
     "value2": "простая связь",
     "value3": "примерное качество"
   },
   "news": {
-    "read-more": "Czytaj więcej...",
-    "read-less": "Czytaj mniej...",
-    "load-more": "załaduj więcej"
+    "read-more": "Читать далее...",
+    "read-less": "Читать меньше...",
+    "load-more": "загрузить больше"
   },
   "offer": {
     "header": "Misti это эффективное агентство объединяющee команду профессионалов, работающих с энтузиазмом и полной самоотдачей в любой проект. Нашей главной целью является успех наших клиентов. Мы хотим через соответствующее использование нашего опыта и приобретенных знаний наших сотрудников заполнить клиентам профессиональную поддержку.",
@@ -51,14 +51,14 @@
     "people-list-title": "Контактные данные:",
     "form": {
       "title": "Рекомендуем также контакта с нашим отделом, используя форму ниже:",
-      "field-name": "Imię",
-      "field-email": "Twój email",
-      "field-subject": "Temat",
-      "field-message": "Wiadomość",
-      "button-send": "Wyslij",
-      "thanks": "Dziękujemy za wiadomość! Wkrótce się skontaktujemy.",
-      "validation-required": "Pole jest wymagane.",
-      "validation-email": "Podany adres email jest niepoprawny."
+      "field-name": "Имя",
+      "field-email": "Ваш e-mail",
+      "field-subject": "Тема",
+      "field-message": "Сообщение",
+      "button-send": "Отправить",
+      "thanks": "Спасибо за сообщение! В ближайшее время мы свяжемся.",
+      "validation-required": " Поле обязательно для заполнения.",
+      "validation-email": "Указанный адрес электронной почты неверен."
     }
   }
 }
