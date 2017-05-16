@@ -303,7 +303,7 @@ a[href] {
 .navigation-small {
   position: absolute;
   padding-top: 20px;
-  margin-top: 9px;
+  padding-bottom: 20px;
   z-index: -1;
   text-align: center;
   margin-left: -8px;
@@ -315,6 +315,7 @@ a[href] {
     display: table;
     background: none;
     margin: auto;
+    margin-top: 5px;
   }
 
   > .locale-list {
