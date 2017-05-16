@@ -51,6 +51,7 @@ angular.module("emistiApp").config(['$stateProvider', "$urlRouterProvider", "$lo
     });
     $translateProvider.preferredLanguage('en_US'); // is applied on first load
     $translateProvider.useLocalStorage(); // saves selected language to localStorage
+    $translateProvider.useSanitizeValueStrategy('escape');
   })
   .config(function(tmhDynamicLocaleProvider) {
     tmhDynamicLocaleProvider.localeLocationPattern('js/external/angular-i18n/angular-locale_{{locale}}.js');

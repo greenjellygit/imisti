@@ -15,6 +15,7 @@ var config = {
   sassPath: 'public/assets/styles/sass',
   jsPath: 'public/js',
   htmlPath: 'public/js/templates',
+  indexPath: 'public/index.html',
   assetsPath: 'public/assets',
   bowerDir: 'public/bower_components'
 }
@@ -76,7 +77,7 @@ gulp.task('copy-angular-i18n-minified', function() {
 gulp.task('watch', function() {
   gulp.watch(config.sassPath + '/**/*.scss', ["reload-css"]); 
   gulp.watch(config.jsPath + '/**/*.js', ["reload-js"]); 
-  gulp.watch(config.htmlPath + '/**/*.html', ["reload-html"]); 
+  gulp.watch([config.htmlPath + '/**/*.html', config.indexPath], ["reload-html"]); 
   gulp.watch(config.assetsPath + '/**/*.*', ["reload-assets"]); 
 });
 
@@ -85,7 +86,7 @@ gulp.task('reload-css', function(callback) {
 });
 
 gulp.task('reload-html', function(callback) {
-  sequence('copy-html')(callback);
+  sequence('copy-html', 'concatenation')(callback);
 });
 
 gulp.task('reload-js', function(callback) {

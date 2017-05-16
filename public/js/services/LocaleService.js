@@ -2,7 +2,7 @@ angular.module('emistiApp').service('LocaleService', function($translate, LOCALE
   'use strict';
 
   var localeList = LOCALES.list;
-  var currentLocale = $translate.proposedLanguage(); // because of async loading
+  var currentLocale = $translate.use();
 
   var checkLocaleIsValid = function(locale) {
     return localeList.some(function(e) {

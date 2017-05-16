@@ -18,22 +18,10 @@
 </head>
 
 <body ng-app="emistiApp">
-  <header ng-controller="NavbarController" class="text-right">
-    <a ui-sref="home" ng-class="{'active': isLogoVisible()}" class="logo-misti-small" ng-cloak></a>
-    <a ui-sref="home" ui-sref-active="active" role="button" translate="navbar.main-page"></a>
-    <a ui-sref="news" ui-sref-active="active" role="button" translate="navbar.news"></a>
-    <a ui-sref="offer" ui-sref-active="active" role="button" translate="navbar.offer"></a>
-    <a ui-sref="contact" ui-sref-active="active" role="button" translate="navbar.contact"></a>
-    <ul class="locale-list">
-      <li ng-repeat="locale in localeList" ng-class="{'active' : currentLocaleName == locale.name}" ng-attr-value="{{locale.name}}" ng-click="setLocale($index)">
-      </li>
-    </ul>
-  </header>
-  </div>
+  <ng-include src="'js/templates/navigation.html'"></ng-include>
   <main class="ui-view-container">
     <div class="container" ui-view></div>
   </main>
-
   <div class="top-buffer-50"></div>
   <footer class="fixed text-center">
     <p>2017 by MISTI</p>

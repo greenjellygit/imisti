@@ -47,6 +47,10 @@ a[href] {
   margin-top: 20px;
 }
 
+.top-buffer-30 {
+  margin-top: 20px;
+}
+
 .top-buffer-25 {
   margin-top: 25px;
 }
@@ -63,6 +67,22 @@ a[href] {
   margin-top: 120px;
 }
 
+.navigation-small {
+  margin-top: 13px;
+}
+
+.navigation-small.ng-hide {
+  margin-top: -100%;
+}
+
+.navigation-small.ng-hide-add, .navigation-small.ng-hide-remove {
+  transition: margin-top ease-in-out 0.4s;
+}
+
+.navigation-small .locale-list > li {
+  margin: 0 15px;
+}
+
 .opacity-anim {
   opacity: 1;
 }
@@ -71,13 +91,13 @@ a[href] {
   opacity: 0;
 }
 
-.capitalize::first-letter {
-  text-transform: capitalize;
-}
-
 .opacity-anim.ng-hide-add,
 .opacity-anim.ng-hide-remove {
   transition: opacity linear 0.5s;
+}
+
+.capitalize::first-letter {
+  text-transform: capitalize;
 }
 
 .loadingSpinner {
@@ -100,7 +120,7 @@ a[href] {
 
 .locale-list {
   display: inline-block;
-  padding-top: 6px;
+  padding-top: 8px;
   margin: 6px 0;
   padding-left: 14px;
 }
@@ -2521,6 +2541,29 @@ ul.breadcrumbs li:last-child:after {
   top: 37px;
 }
 
+.navigation-small {
+  position: absolute;
+  padding-top: 20px;
+  margin-top: 9px;
+  z-index: -1;
+  text-align: center;
+  margin-left: -8px;
+  width: 100%;
+  height: 200px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.navigation-small > a[role=button] {
+  display: table;
+  background: none;
+  margin: auto;
+}
+
+.navigation-small > .locale-list {
+  padding-left: 0;
+  padding-top: 20px;
+}
+
 footer.fixed {
   position: fixed;
   width: 100%;
@@ -2534,13 +2577,6 @@ header a[role="button"]:hover {
   transition-duration: 0s;
 }
 
-/*
-header {
-  position: fixed;
-  width: 100%;
-  z-index: 1;
-  top: 0;
-}*/
 body {
   background-image: url("/assets/images/background.jpg");
   background-color: #afbbcc;
@@ -2560,6 +2596,7 @@ body {
   position: relative;
   overflow-y: overlay;
   overflow-x: hidden;
+  z-index: -2;
   height: 100%;
 }
 
@@ -2721,6 +2758,24 @@ body {
   margin-left: 0;
   border-radius: 0;
   margin: 0;
+}
+
+.menu-button {
+  width: 31px;
+  height: 22px;
+  background: url("/assets/images/button_menu.png") !important;
+  margin-top: 11px;
+  outline: none;
+}
+
+.menu-button.active:after {
+  content: "";
+  background-color: rgba(78, 52, 18, 0.62);
+  width: 31px;
+  height: 22px;
+  display: block;
+  margin-left: -12px;
+  margin-top: -6px;
 }
 
 .loadMore-button {

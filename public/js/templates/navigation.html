@@ -1,0 +1,30 @@
+<header ng-controller="NavbarController" class="text-right">
+  <div class="hidden-sm">
+    <a ui-sref="home" ng-class="{'active': isLogoVisible()}" class="logo-misti-small" ng-cloak></a>
+    <a ui-sref="home" ui-sref-active="active" role="button" translate="navbar.main-page"></a>
+    <a ui-sref="news" ui-sref-active="active" role="button" translate="navbar.news"></a>
+    <a ui-sref="offer" ui-sref-active="active" role="button" translate="navbar.offer"></a>
+    <a ui-sref="contact" ui-sref-active="active" role="button" translate="navbar.contact"></a>
+    <ul class="locale-list">
+      <li ng-repeat="locale in localeList" ng-class="{'active' : currentLocaleName == locale.name}" ng-attr-value="{{locale.name}}" ng-click="setLocale($index)">
+      </li>
+    </ul>
+  </div>
+  <div class="hidden-md hidden-lg">
+    <a ui-sref="home" ng-class="{'active': isLogoVisible()}" class="logo-misti-small" ng-cloak></a>
+      <ul class="locale-list">
+        <li ng-attr-value="{{currentLocaleName}}" ng-click="openMenu()"></li>
+      </ul>
+    <button ng-click="openMenu()" class="menu-button" ng-class="{'active': isMenuOpened}"></button>
+    <div ng-show="isMenuOpened" class="navigation-small">
+      <a ui-sref="home" ng-click="openMenu()" ui-sref-active="active" role="button" translate="navbar.main-page"></a>
+      <a ui-sref="news" ng-click="openMenu()" ui-sref-active="active" role="button" translate="navbar.news"></a>
+      <a ui-sref="offer" ng-click="openMenu()" ui-sref-active="active" role="button" translate="navbar.offer"></a>
+      <a ui-sref="contact" ng-click="openMenu()" ui-sref-active="active" role="button" translate="navbar.contact"></a>
+      <ul class="locale-list top-buffer-30">
+        <li ng-repeat="locale in localeList" ng-class="{'active' : currentLocaleName == locale.name}" ng-attr-value="{{locale.name}}" ng-click="setLocale($index)">
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
