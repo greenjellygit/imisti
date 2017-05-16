@@ -12,9 +12,9 @@
   </div>
   <div class="hidden-md hidden-lg">
     <a ui-sref="home" ng-class="{'active': isLogoVisible()}" class="logo-misti-small" ng-cloak></a>
-      <ul class="locale-list">
-        <li ng-attr-value="{{currentLocaleName}}" ng-click="openMenu()"></li>
-      </ul>
+    <ul class="locale-list">
+      <li ng-attr-value="{{currentLocaleName}}" ng-click="openMenu()"></li>
+    </ul>
     <button ng-click="openMenu()" class="menu-button" ng-class="{'active': isMenuOpened}"></button>
     <div ng-show="isMenuOpened" class="navigation-small">
       <a ui-sref="home" ng-click="openMenu()" ui-sref-active="active" role="button" translate="navbar.main-page"></a>
@@ -26,5 +26,6 @@
         </li>
       </ul>
     </div>
+    <div ng-click="openMenu()" ng-show="isMenuOpened" class="navigation-outside-wrapper"></div>
   </div>
 </header>
