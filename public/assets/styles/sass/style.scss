@@ -3,6 +3,7 @@ $color-emisti-dark-blue: #1f2837;
 $color-emisti-middle-blue: #303e55;
 $color-emisti-light-blue: #477ace;
 $color-emisti-white: #fcf8f4;
+$color-emisti-red: #ff7575;
 $color-emisti-transparent: rgba(0, 0, 0, 0.6);
 $color-emisti-transparent-more: rgba(0, 0, 0, 0.8);
 
@@ -518,6 +519,7 @@ body {
   margin-left: 0;
   border-radius: 0;
   margin: 0;
+  cursor: pointer;
 }
 
 .menu-button {
@@ -631,4 +633,49 @@ body {
 .selectLanguage-text {
   margin-bottom: 20px;
   text-align: center;
+}
+//-------------------------------contactForm
+
+.form-contact {
+   > textarea,
+  > input {
+    margin: 2px 0;
+  }
+}
+
+.disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.65;
+}
+
+.panel-buttons {
+  display: flex;
+  flex-direction: row;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.attachment-list {
+  text-align: center;
+
+  > span {
+    display: flex;
+    line-height: 30px;
+    justify-content: center;
+
+    &:after {
+      content: "✖";
+      color: $color-emisti-red;
+      margin-left: 10px;
+      font-size: large;
+      cursor: pointer;
+    }
+  }
+}
+
+.danger {
+  color: $color-emisti-red;
 }

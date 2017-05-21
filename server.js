@@ -15,7 +15,7 @@ app.use(express.static(__dirname + '/dist/'));
 app.use(bodyParser.urlencoded({
   'extended': 'false'
 }));
-app.use(bodyParser.json());
+app.use(bodyParser.json({limit: '20mb'}));
 app.use(favicon(__dirname + '/dist/assets/images/favicon/favicon.ico'));
 
 app.get('/', function(req, res) {

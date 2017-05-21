@@ -55,10 +55,13 @@
       "field-email": "Twój email",
       "field-subject": "Temat",
       "field-message": "Wiadomość",
+      "button-addFile": "Dodaj pliki",
       "button-send": "Wyslij",
       "thanks": "Dziękujemy za wiadomość! Wkrótce się skontaktujemy.",
       "validation-required": "Pole jest wymagane.",
-      "validation-email": "Podany adres email jest niepoprawny."
+      "validation-email": "Podany adres email jest niepoprawny.",
+      "validation-attachment-maxsize": "Załączniki nie mogą przekraczać 10 MB.",
+      "validation-attachment-maxnum": "Nie można wysłać więcej niż 5 załączników."
     }
   }
 }

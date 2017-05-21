@@ -15,27 +15,25 @@ var transporter = nodemailer.createTransport({
   debug: true
 });
 
-var mailOptions = {
-  //comma separated receivers string
-  to: config.MAIL.RECEIVERS_LIST,
-};
-
 // verify connection configuration
 transporter.verify(function(error, success) {
-   if (error) {
-        console.log(error);
-   } else {
-        console.log('Server is ready to take our messages');
-   }
+  if (error) {
+    console.log(error);
+  } else {
+    console.log('Server is ready to take our messages');
+  }
 });
 
 function prepareEmail(emailData) {
   var newEmail = {
     from: config.MAIL.SENDER_NAME,
-    to: mailOptions.to,
+    to: config.MAIL.RECEIVERS_LIST,
     subject: "[Formularz kontaktowy] " + emailData.subject,
     text: "Imię nadawcy: " + emailData.name + "<br>Adres nadawcy: " + emailData.email + "<br><br>" + emailData.text,
     html: "<b>Imię nadawcy:</b> " + emailData.name + "<br><b>Adres nadawcy:</b> " + emailData.email + "<br><br>" + emailData.text
+  }
+  if (emailData.attachments.length > 0) {
+    newEmail.attachments = emailData.attachments;
   }
   return newEmail;
 }

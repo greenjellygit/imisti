@@ -1,6 +1,6 @@
 angular.module("emistiApp", ["ui.router", "ngAnimate", "ngCookies",
   "pascalprecht.translate", "tmh.dynamicLocale",
-  "angulartics.google.analytics", "angulartics"
+  "angulartics.google.analytics", "angulartics", "naif.base64"
 ]);
 
 angular.module("emistiApp")

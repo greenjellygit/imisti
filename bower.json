@@ -16,6 +16,7 @@
     "angular-translate-handler-log": "^2.15.1",
     "angular-dynamic-locale": "^0.1.32",
     "angular-i18n": "^1.6.4",
-    "angulartics-google-analytics": "^0.4.0"
+    "angulartics-google-analytics": "^0.4.0",
+    "angular-base64-upload": "^0.1.22"
   }
 }
