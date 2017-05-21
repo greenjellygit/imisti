@@ -56,9 +56,12 @@
       "field-subject": "Тема",
       "field-message": "Сообщение",
       "button-send": "Отправить",
+      "button-addFile": "Добавить файлы",
       "thanks": "Спасибо за сообщение! В ближайшее время мы свяжемся.",
       "validation-required": " Поле обязательно для заполнения.",
-      "validation-email": "Указанный адрес электронной почты неверен."
+      "validation-email": "Указанный адрес электронной почты неверен.",
+      "validation-attachment-maxsize": "Вложения не может превышать 10 МБ.",
+      "validation-attachment-maxnum": "Вы не можете отправить более 5 вложений."
     }
   }
 }
