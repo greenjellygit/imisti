@@ -8,5 +8,3 @@ ga('create', 'UA-99657538-1', 'auto');
 if (location.hostname == 'localhost') {
   ga('set', 'sendHitTask', null);
 }
-
-ga('send', 'pageview');
