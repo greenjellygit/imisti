@@ -1,5 +1,5 @@
-angular.module("emistiApp").controller("NavbarController", ["$scope", "$document", "$state", "LocaleService",
-  function($scope, $document, $state, LocaleService) {
+angular.module("emistiApp").controller("NavbarController", ["$rootScope", "$scope", "$document", "$state", "LocaleService",
+  function($rootScope, $scope, $document, $state, LocaleService) {
     $scope.isMenuOpened = false;
     $scope.isLogoVisible = function() {
       return $state.current && $state.current.name != "home" && $state.current.name != "";
@@ -14,9 +14,9 @@ angular.module("emistiApp").controller("NavbarController", ["$scope", "$document
     };
 
     angular.element(document.querySelector('#navigation-outside-wrapper')).on('touchstart mousedown', function(evt) {
-      if($scope.isMenuOpened) {
+      if ($scope.isMenuOpened) {
         $scope.$apply(function() {
-            $scope.openMenu();
+          $scope.openMenu();
         });
       }
     });
@@ -24,5 +24,9 @@ angular.module("emistiApp").controller("NavbarController", ["$scope", "$document
     $scope.openMenu = function() {
       $scope.isMenuOpened = !$scope.isMenuOpened;
     };
+
+    $rootScope.$on('event-language-changed', function() {
+      $scope.currentLocaleName = LocaleService.getCurrentLocale();
+    });
   }
 ]);

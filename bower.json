@@ -15,6 +15,7 @@
     "angular-translate-storage-local": "^2.15.1",
     "angular-translate-handler-log": "^2.15.1",
     "angular-dynamic-locale": "^0.1.32",
-    "angular-i18n": "^1.6.4"
+    "angular-i18n": "^1.6.4",
+    "angulartics-google-analytics": "^0.4.0"
   }
 }

@@ -1,0 +1,14 @@
+<div ng-controller="LanguageSelectController">
+  <div ng-if="isLanguageSelectVisible" class="container-selectLanguage">
+    <div class="selectLanguage round-panel border col-md-5 col-lg-3">
+      <div class="selectLanguage-text">
+        Please, select your language:
+      </div>
+      <ul class="locale-list-big">
+        <li ng-repeat="locale in localeList" ng-attr-value="{{locale.name}}" ng-click="setLocale($index)"
+        analytics-on="click" analytics-event="select_language" ng-attr-analytics-properties="{selected_value:'{{locale.name}}'}">
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

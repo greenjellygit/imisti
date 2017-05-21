@@ -3,7 +3,7 @@
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','https://www.google-analytics.com/analytics_debug.js','ga');
 
-ga('create', 'UA-99657538-1', 'auto');
+ga('create', 'UA-99657538-1', 'none');
 
 if (location.hostname == 'localhost') {
   ga('set', 'sendHitTask', null);

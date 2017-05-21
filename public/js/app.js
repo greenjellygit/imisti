@@ -1,6 +1,11 @@
-angular.module("emistiApp", ["ui.router", "ngAnimate", "ngCookies", "pascalprecht.translate", "tmh.dynamicLocale"]);
+angular.module("emistiApp", ["ui.router", "ngAnimate", "ngCookies",
+  "pascalprecht.translate", "tmh.dynamicLocale",
+  "angulartics.google.analytics", "angulartics"
+]);
 
-angular.module("emistiApp").config(['$stateProvider', "$urlRouterProvider", "$locationProvider",
+angular.module("emistiApp")
+  .config(['$stateProvider', "$urlRouterProvider",
+    "$locationProvider",
     function($stateProvider, $urlRouterProvider, $locationProvider) {
       $urlRouterProvider.otherwise('/home');
       $locationProvider.hashPrefix('');
@@ -26,6 +31,9 @@ angular.module("emistiApp").config(['$stateProvider', "$urlRouterProvider", "$lo
         });
     }
   ])
+  .config(function($analyticsProvider) {
+    $analyticsProvider.virtualPageviews(false);
+  })
   .constant('LOCALES', {
     'list': [{
         name: 'en_US',
@@ -49,15 +57,17 @@ angular.module("emistiApp").config(['$stateProvider', "$urlRouterProvider", "$lo
       prefix: 'assets/i18n/locale-', // path to translations files
       suffix: '.json' // suffix, currently- extension of the translations
     });
+    $translateProvider.storageKey('GUEST_LANG_KEY');
     $translateProvider.preferredLanguage('en_US'); // is applied on first load
     $translateProvider.useLocalStorage(); // saves selected language to localStorage
     $translateProvider.useSanitizeValueStrategy('escape');
   })
   .config(function(tmhDynamicLocaleProvider) {
-    tmhDynamicLocaleProvider.localeLocationPattern('js/external/angular-i18n/angular-locale_{{locale}}.js');
+    tmhDynamicLocaleProvider.localeLocationPattern(
+      'js/external/angular-i18n/angular-locale_{{locale}}.js');
   })
-  .run(function ($rootScope, $location) {
-    $rootScope.$on('$stateChangeSuccess', function(){
-        ga('send', 'pageview', $location.path());
+  .run(function($rootScope, $location) {
+    $rootScope.$on('$stateChangeSuccess', function() {
+      ga('send', 'pageview', $location.path());
     });
-});;
+  });;

@@ -314,8 +314,7 @@ a[href] {
   > a[role=button] {
     display: table;
     background: none;
-    margin: auto;
-    margin-top: 5px;
+    margin: 5px auto auto;
   }
 
   > .locale-list {
@@ -402,9 +401,6 @@ body {
 
 [ui-view].ng-leave-active {
   opacity: 0;
-  //-webkit-transform:translate3d(100px, 0, 0);
-  //-moz-transform:translate3d(100px, 0, 0);
-  //transform:translate3d(100px, 0, 0);
   -webkit-transform: scale3d(0.5, 0.5, 0.5);
   -moz-transform: scale3d(0.5, 0.5, 0.5);
   transform: scale3d(0.5, 0.5, 0.5);
@@ -527,9 +523,9 @@ body {
 .menu-button {
   width: 31px;
   height: 22px;
-  background: url("/assets/images/button_menu.png") !important;
-  margin-top: 11px;
+  background: url("/assets/images/button_menu.png") no-repeat center !important;
   outline: none;
+  padding: 20px;
 }
 
 .menu-button.active:after {
@@ -538,8 +534,8 @@ body {
   width: 31px;
   height: 22px;
   display: block;
-  margin-left: -12px;
-  margin-top: -6px;
+  margin-left: -15px;
+  margin-top: -11px;
 }
 
 .loadMore-button {
@@ -570,4 +566,69 @@ body {
     max-width: 47%;
     min-height: 444px;
   }
+}
+//-------------------------------selectLanguage
+
+.container-selectLanguage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  right: 0;
+  margin: auto;
+  background-color: rgba(21, 28, 41, 0.6);
+}
+
+.selectLanguage {
+  position: absolute;
+  top: 35%;
+  left: 10px;
+  right: 10px;
+  padding: 25px 0 35px;
+  margin: auto;
+  background-color: #273656;
+
+  > ul {
+    padding: 0;
+    width: 235px;
+    margin: auto;
+  }
+}
+
+.locale-list-big {
+  > li:first-child {
+    margin-left: 0;
+  }
+
+  > li:last-child {
+    margin-right: 0;
+  }
+
+  > li {
+    margin: 0 10px;
+    width: 65px;
+    display: inline-block;
+    height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+
+  > li[value="en_US"] {
+    background-image: url("/assets/images/locale_en_big.png");
+  }
+
+  > li[value="pl_PL"] {
+    background-image: url("/assets/images/locale_pl_big.png");
+  }
+
+  > li[value="ru_RU"] {
+    background-image: url("/assets/images/locale_ru_big.png");
+  }
+}
+
+.selectLanguage-text {
+  margin-bottom: 20px;
+  text-align: center;
 }
