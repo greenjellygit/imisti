@@ -4,7 +4,6 @@ var config = require('./Configuration.js');
 var transporter = nodemailer.createTransport({
   host: config.MAIL.HOST,
   port: config.MAIL.PORT,
-  secure: true,
   auth: {
     user: config.MAIL.SENDER_NAME,
     pass: config.MAIL.SENDER_PASSWORD
