@@ -55,4 +55,9 @@ angular.module("emistiApp").config(['$stateProvider', "$urlRouterProvider", "$lo
   })
   .config(function(tmhDynamicLocaleProvider) {
     tmhDynamicLocaleProvider.localeLocationPattern('js/external/angular-i18n/angular-locale_{{locale}}.js');
-  });
+  })
+  .run(function ($rootScope, $location) {
+    $rootScope.$on('$viewContentLoaded', function(){
+        ga('send', 'pageview', $location.path());
+    });
+});;

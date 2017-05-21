@@ -10,6 +10,8 @@ var server = require('gulp-express');
 var sequence = require('gulp-sequence');
 var minifyCss = require('gulp-clean-css');
 var ngAnnotate = require('gulp-ng-annotate');
+var using = require('gulp-using');
+var preprocess = require('gulp-preprocess');
 
 var config = {
   sassPath: 'public/assets/styles/sass',
@@ -41,6 +43,12 @@ var jsWork = lazypipe()
 
 gulp.task('minification', function() {
   return gulp.src('public/index.html')
+    .pipe(preprocess({
+      context: {
+        NODE_ENV: 'PROD',
+        DEBUG: true
+      }
+    }))
     .pipe(useref())
     .pipe(gulpif('*.js', jsWork()))
     .pipe(gulpif('*.css', minifyCss()))
@@ -49,6 +57,12 @@ gulp.task('minification', function() {
 
 gulp.task('concatenation', function() {
   return gulp.src('public/index.html')
+    .pipe(preprocess({
+      context: {
+        NODE_ENV: 'DEV',
+        DEBUG: true
+      }
+    }))
     .pipe(useref())
     .pipe(gulp.dest('dist'));
 });
@@ -59,7 +73,7 @@ gulp.task('copy-assets', function() {
 });
 
 gulp.task('copy-html', function() {
-  return gulp.src(['public/js/**', '!public/js/controllers{,/**}', '!public/js/directives{,/**}', '!public/js/services{,/**}', '!public/js/app.js'])
+  return gulp.src(['public/js/**', '!public/js/others{,/**}', '!public/js/controllers{,/**}', '!public/js/directives{,/**}', '!public/js/services{,/**}', '!public/js/app.js'])
     .pipe(gulp.dest('dist/js/'));
 });
 

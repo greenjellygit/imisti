@@ -51,6 +51,12 @@
   <script src="js/services/ContactService.js"></script>
   <script src="js/directives/ReadMoreDirective.js"></script>
   <script src="js/directives/CollapseDirective.js"></script>
+  <!-- @if NODE_ENV='PROD' -->
+  <script src="js/others/googleAnalytics.js"></script>
+  <!-- @endif -->
+  <!-- @if NODE_ENV='DEV' -->
+  <script src="js/others/googleAnalytics_dev.js"></script>
+  <!-- @endif -->
   <!-- endinject -->
   <!-- endbuild -->
 </body>
