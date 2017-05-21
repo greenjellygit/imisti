@@ -7,15 +7,15 @@ var accessToken = null;
 
 const urls = {
   appAccesToken: "https://graph.facebook.com/oauth/access_token",
-  fanpagePosts: "https://graph.facebook.com/" + config.FB_IMISTI_PAGE_ID + "/posts?fields=full_picture,picture,message,created_time"
+  fanpagePosts: "https://graph.facebook.com/" + config.FB.IMISTI_PAGE_ID + "/posts?fields=full_picture,picture,message,created_time"
 };
 
 function getAccessToken() {
   util.log('GET request: FB api access_token');
   unirest.get(urls.appAccesToken)
     .query({
-      client_id: config.FB_CLIENT_ID,
-      client_secret: config.FB_CLIENT_SECRET,
+      client_id: config.FB.CLIENT_ID,
+      client_secret: config.FB.CLIENT_SECRET,
       grant_type: 'client_credentials'
     })
     .end(function(res) {

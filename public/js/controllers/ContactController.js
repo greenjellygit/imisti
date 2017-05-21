@@ -10,6 +10,7 @@ angular.module("emistiApp").controller("ContactController", ["$scope", "ContactS
   };
 
   $scope.sendEmail = function() {
+    $scope.emailData.text = $scope.emailData.text.replace(/\n/g, '<br/>');
     ContactService.sendEmail($scope.emailData);
     $scope.isEmailSend = true;
   };
