@@ -30,8 +30,13 @@
         </div>
         <div class="col-sm-12 col-md-8">
           <div class="row news-title hidden-sm">{{news.title}}</div>
-          <div class="row news-text" collapse="!news.isCollapsed">
-            <span read-more max-length="250" text="news.text" is-collapsed="news.isCollapsed" is-overflowed="isOverflowed">{{news.text}}</span>
+          <div class="row news-text top-buffer-5" collapse="!news.isCollapsed">
+            <span read-more max-length="250" text="news.text" is-collapsed="news.isCollapsed" is-overflowed="isOverflowed">
+              {{news.text}}
+            </span>
+          </div>
+          <div class="row news-text news-source top-buffer-10" ng-if="news.source">
+            Źródło: <a ng-attr-href="{{'//' + news.source}}">{{news.source}}</a>
           </div>
           <div class="row">
             <button class="readMore-button" ng-show="!news.isCollapsed && isOverflowed" ng-click="news.isCollapsed = true;">{{'news.read-more' | translate}}</button>

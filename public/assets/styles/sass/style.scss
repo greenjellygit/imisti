@@ -43,6 +43,10 @@ a[href] {
   margin-top: 10px;
 }
 
+.top-buffer-15 {
+  margin-top: 15px;
+}
+
 .bottom-buffer-10 {
   margin-bottom: 10px;
 }
@@ -451,7 +455,6 @@ body {
 .news-text {
   font-size: 0.75em;
   line-height: 15px;
-  margin-top: 5px;
   overflow: hidden;
   max-height: 500px;
   -moz-transition: 1s;
@@ -470,8 +473,8 @@ body {
   transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 5s;
 }
 
-.news-text > span {
-  white-space: pre-line;
+.news-source {
+  display: block;
 }
 
 .listItem.ng-enter.ng-enter-active {

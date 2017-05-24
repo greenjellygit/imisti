@@ -62,7 +62,14 @@ function processPosts(postList) {
     var message = postList[i].message;
     var textLines = message.split('\n');
     postList[i].title = textLines.splice(0, 1)[0];
-    postList[i].text = textLines.join('\n').substring(1);
+    textLines.splice(0, 1)[0];
+    if(message.indexOf("Źródło: ") != -1) {
+      var lastLine = textLines.splice(textLines.length - 1, 1)[0];
+      postList[i].source = lastLine.split("Źródło: ")[1];
+    }
+    postList[i].text = textLines.join('\n').substring(0);
+    delete postList[i].message;
+    delete postList[i].id;
   }
   return postList;
 }
